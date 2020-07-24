@@ -1,0 +1,326 @@
+﻿,<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Assess</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .padding-0 {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <!-- A grey horizontal navbar that becomes vertical on small screens -->
+    <nav class="navbar navbar-expand-sm bg-light">
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../../iBWIM/report.html">iBWIM</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../../iSHM/report.html">iSHM</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../../Research/research.html">Research</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../../Resources/resources.html">Resources</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../../About/about.html">About</a>
+            </li>
+
+        </ul>
+
+    </nav>
+    <br>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-1" style="background-color:lavender;"></div>
+
+            <div class="col-sm-10">
+               
+
+                <h1>Bridge Weigh in Motion (BWIM) for Bridge Assessment</h1><br>
+                <p>Keywords: <i>Bridge Weigh in Motion, Structural Health Monitoring, Heavy Goods Vehicles, Structural Inspection</i><p>
+                    <h4>Introduction</h4>
+                <p class="text-justify">
+                    Heavy Goods Vehicles (HGVs) are a significant source of wear on bridges.
+                    The impact of HG traffic becomes particularly important if a bridge is already in a weakened state.
+                    For instance a physical inspection may detect a maintenance issue such as corrosion of a structural element.
+                    The next question is how long is it safe to operate the bridge?
+                    By giving an accurate, up to date picture of the bridge loading, a BWIM system can support the engineer in this decision.
+                </p >
+                <p class="text-justify">
+                    When assessing safety, surprisingly little attention is paid to the loading of the structure by HG traffic.
+                    The assumptions about loading made during the design phase, perhaps forty years earlier, may no longer be valid.
+                    They may, for instance, underestimate the amount of HG traffic, the average weight of individual HGVs or the degree of congestion on the bridge.
+                    When a bridge's safety is re-assessed it is critical that an appropriate model of the traffic load based on measured data is used.
+                    An up to date model of loading will allow engineers to make a more informed decison about the urgency of repairs and the continued operation of the bridge.
+                </p>
+                <p class="text-justify">
+
+                    Loading can affect the bridge both <i>statically</i>, by exceeding an element's yield strength and <i>dynamically</i>, by causing fatigue failures.
+                    In the next section we shall deal with static loading: we describe a statistical approach to assessing structural safety and how data from BWIM can be used to conduct it.
+                    We then consider dynamic loading: we describe how cyclic loading is related to fatigue failure and how BWIM data can be processed to predict when a structural element is likely to fail.
+                </p>
+
+
+
+
+            </div>
+            <div class="col-sm-1" style="background-color:lavender;"></div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-1" style="background-color:lavender;"></div>
+
+            <div class="col-sm-4" style="background-color:white;">
+                <!--<img class="img-fluid" src="loadDiagram.png" class="mx-auto d-block" />-->
+                <img class="img-fluid" src="plan.png" class="mx-auto d-block" />
+            </div>
+
+            <div class="col-sm-6">
+                <h4>
+                    Modelling Static Loading
+                </h4>
+                <p>
+                    The static load on a bridge exerted by HG traffic depends on two factors:
+                    <ul>
+                        <li>the number of HGVs on the bridge at one time, and  </li>
+                        <li>the weight of the vehicles.  </li>
+
+                    </ul>
+                </p>
+
+                <p class="text-justify">
+
+                    Both of these factors are random variables: they can only be modelled in statistical terms.
+                    The <i>weight</i> of a randomly selected vehicle cannot be known in advance, however, we can say that it will fall into a given distribution.
+                    We use the <i> Conditional Axle Load (CAL)</i> model to quantify this statistical variation of loads applied to the bridge..
+         
+                    The <i> number of HGVs simultaneously on the bridge </i>  depends on whether HGVs are evenly distributed among other traffic, moving in convoy, or in closely packed convoys that are stationary due to congestion.
+                    It will also depend on the diurnal and weekly traffic patterns.
+                    We quantify these effects using our <i>Traffic Flow Model</i>.
+                    Both CAL and traffic Flow models are stochastic, accounting for both random and deterministic factors.
+                </p>    
+                <p class="text-justify">
+                    
+                    The CAL and Traffic Flow models form the basis of our statistical analysis.
+                    They are combined into the load model, which along with a statistical model of the structural element in question are passed to the simulation engine.
+                    This will give an estimate of the likelihood the element will fil within the defined time period.
+                    In the following subsections we will describe how the load model is derived from BWIM data and the method by which we combine load and structral models within a probablistic framework.
+                </p>
+            </div>
+            <div class="col-sm-1" style="background-color:lavender;"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1" style="background-color:lavender;"></div>
+            <div class="col-sm-10">
+
+                <h6>Finding the GVW and Traffic Flow Distributions</h6>
+                A BWIM system gives the following information:
+                <ul>
+                    <li>list of vehicles</li>
+                    <li>their speed</li>
+                    <li>their weight</li>
+                    <li>the time they crossed the bridge.</li>
+
+                </ul>
+
+               
+
+                From this we must construct our weight distribution (CAL) and traffic flow models.
+                The CAL model uses axle patterns and vehicle profiles to classify vehicles into various categories.
+                The statistical variation of loading patterns is modelled for each of these classes.
+                We typically model this probabilistic distribution as a Gaussian mixture.
+                The Traffic Flow model is the statistical distribution of convoys containing <i>n</i> HGVs and we describe this with a geometric distribution, modified by the diurnal traffic distribution.
+            </div>
+
+
+            <div class="col-sm-1" style="background-color:lavender;"></div>
+
+
+
+        </div>
+
+
+        <div class="col-sm-1" style="background-color:lavender;"></div>
+
+
+        <div class="row">
+            <div class="col-sm-1" style="background-color:lavender;"></div>
+            <div class="col-sm-10">
+                <img class="img-fluid" src="gvwDistrib.png" class="mx-auto d-block" style="width:32%" ; />
+                <img class="img-fluid" src="trafficFlow.png" class="mx-auto d-block" style="width:32%" ; />
+                <img class="img-fluid" src="diurnal.png" class="mx-auto d-block" style="width:32%" ; />
+            </div>
+            <div class="col-sm-1" style="background-color:lavender;"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-1" style="background-color:lavender;"></div>
+            <div class="col-sm-4">
+                <img class="img-fluid" src="limitStateFunction.png" class="mx-auto d-block" />
+
+            </div>
+            <div class="col-sm-6">
+                <h6>Statistical Analysis Method</h6>
+                <p class="text-justify">
+                    The safety of a bridge is assessed by examining individual structural elements.
+                    Like the loading of the bridge, the strength of a given structural element is also a random variable and is also best treated in probabilistic terms.
+                    It follows that any prediction about the failure of the element will also be probabilistic.
+                </p>
+
+                <p class="text-justify">
+                    Consider a trivial example: a beam of resistance R, is loaded with a force S.
+                    If the load exceeds the resistance, i.e. R &#8249 S, then the beam will fail. We can plot all the possible combinations of strength and load, <i>opposite</i>.
+                    The failure region, i.e. those combinations of R and S for which the beam will fail, lie on one side of the line R-S=0, and the safe region lies on the other. We call this line the Limit State Function.
+                </p>
+            </div>
+            <div class="col-sm-1" style="background-color:lavender;"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-1" style="background-color:lavender;"></div>
+            <div class="col-sm-10">
+                <p class="text-justify">
+                    Now, assume that we know that structural elements from the same batch have a statistical distribution of resistances, centred around 90k Newtons (left).
+                    Furthermore, we know from our BWIM measurements that most loads occur around 60k Newtons, but occasionally we will get a higher load.
+                    What is the probability that the beam will fail? To know this, we must consider the joint probability of R and S (right).
+                    The <b>probability of failure</b>, is the sum of probabilities in the failure region.
+                    In more mathematical terms, this is the integral of the joint probability function over the region bounded by the limit state function.
+                </p>
+            </div>
+            <div class="col-sm-1" style="background-color:lavender;"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-1" style="background-color:lavender;"></div>
+            <div class="col-sm-10">
+                <img class="img-fluid" src="probFuncs.png" class="mx-auto d-block" style="width:45%" ; />
+                <img class="img-fluid" src="jointProb2.png" class="mx-auto d-block" style="width:45%" ; />
+            </div>
+            <div class="col-sm-1" style="background-color:lavender;"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-1" style="background-color:lavender;"></div>
+            <div class="col-sm-10">
+
+                <p class="text-justify">
+                    In this trivial example, it is easy to understand what is happening, but surprisingly difficult to estimate the probability of an event intuitively.
+                    Things get more complicated if there are many variables—as there usually are, or if they are correlated with one another.
+                    For this reason, in the early nineties we developed the Variables Processor software library.
+                    This remains at computational core of many of our subsequent applications, the interested reader is referred to [2].
+
+                </p>
+
+                <h6>Summary</h6>
+              
+
+                    <p class="text-justify">
+                       With our models of vehicle weight and traffic flow, and data from BWIM, we can predict the likely loads on a bridge.
+                        With our structural engineering expertise we select a series of critical structural elements, and estimate the proability of failure as a function of load.
+                        The Load Model and Strtuctural Model are then passed to our Stochastic Simulation Engine which will the estimate the likelihood of the element failing. 
+        
+
+                    </p>
+
+                </div>
+                <div class="col-sm-1" style="background-color:lavender;"></div>
+            </div>
+
+
+    </div> <!--container class -->
+        <!-- Spacer-->
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-sm-1" style="background-color:lavender;"></div>
+                <div class="col-sm-6">
+                    <h4>
+                        Modelling Dynamic Loading
+                    </h4>
+                    <p class="text-justify">
+                        A more insidious mode of failure is caused by cyclic loading of a bridge.
+                        As a vehicle traverses a bridge, each axle induces a loading cycle.
+                        The cumulative effect of these impacts may cause a bridge to fail through fatigue &#8212 even if its yield strength is never  approached.
+                    </p>
+                    <p class="text-justify">
+                        The number of loading cycles at which an element will fail for a given loading is given by its a curve of the form shown opposite.
+                        By measuring the frequency and severity of impacts we can model the stresses to which a bridge is exposed to each day.
+                        We can extrapolate this into the past and into the future to show how far along the curve the bridge is and how much longer we can safely operate the bridge.
+                    </p>
+                    <p class="text-justify">
+                        Bridge Weigh in Motion provides a time history of the axle impacts on the bridge.
+                        This must be converted into loading cycles.
+                        This is trivial when the peaks are well seperated, but if there is sigificant overlap then Rainflow analysis must be used.
+                    </p>
+                    <img class="img-fluid" src="cycleCount.png" class="mx-auto d-block" style="width:100%" ; />
+                    <br />
+                    <p class="text-justify">
+                        Once the cycles have been identified Miner's Rule can be applied to estimate the structural element's position on the fatigue curve &#8212 and predict the time to failure.
+                        Alternatively, the cyles can be plotted on a Rainflow Matrix to identify high impact cycles.
+                        These can be traced back, using the BWIM database, to the culprit vehicle.
+</div>
+                
+                <div class="col-sm-4">
+
+                    <img class="img-fluid" src="fatigueCurve.png" class="mx-auto d-block" />
+                </div>
+                <div class="col-sm-1" style="background-color:lavender;"></div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-1" style="background-color:lavender;"></div>
+                <div class="col-sm-10">
+
+                    <h4>
+                        Conclusions
+                    </h4>
+                    <p class="text-justify">
+                        Loading due to HG traffic is a critical factor in any assessment of bridge safety.
+                        Yet models of loading by HG traffic are often based on assumptions that out of date, or lack nuances from the real world.
+                        It is clearly desirable to get actual measurements of traffic load which can inform our models.
+                        Measurements from iBWIM together with appropriate statistical models can take much of the guesswork out of load modelling.
+                    </p>
+                    <h4>
+                        References
+                    </h4>
+                    <br />[1] <i>Use of BWIM data for Bridge assessment.</i><br />
+                    M. Petschacher. ICASP – 11th International Conference on Applications of Statistics and Probability in Civil Engineering; ETH-Zürich, p 800, 2011.<br />
+
+                    [2] <i>VaP 3.0. User Manual – Variables Processor VaP 3.0</i><br />
+                    Technical report, 4, PSP – Petschacher Software und Projektentwicklungs GmbH, 2010.<br />
+
+                </div>
+                <div class="col-sm-1" style="background-color:lavender;">
+
+                </div>
+            </div>
+        </div>
+</body>
+</html>
