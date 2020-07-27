@@ -84,12 +84,12 @@
 
 
 
-                <p>
+                <p class="text-justify">
                     Bridge Weigh In Motion (BWIM) infers the force exerted by the axles of a vehicle by measuring how they deform the bridge.
                     Strain gauges are mounted on the underside of the bridge; their response is linearly related to the force applied by the axle.
                     With calibration data it is possible to calculate the weight of each of the vehicle's axles.
                 </p>
-                <p>
+                <p class="text-justify">
                     As a load passes over a strain sensor the measured strain rises and then declines.
                     For a given vehicle, a series of axles results in a series of ovelapping peaks in the strain signal.
                     The measurement algoithm works by fitting a combination  of prototype peaks to the signal.
@@ -107,7 +107,7 @@
             <div class="col-sm-1" style="background-color:lavender;"></div>
 
             <div class="col-sm-10">
-                <p>
+                <p class="text-justify">
                     The degree of overlap between the peaks depends on the characteristics of the bridge and the vehicle.
                     For instance, on long bridges, multiple axles contribute to the signal, and several peaks may merge.
                     In this case there may be several axle patterns that explain the measurement equally well.
@@ -124,13 +124,13 @@
                 In this section we will briefly discuss bridge characteristics, we leave discussion of the other points to Section 4, which deals specifically with iBWIM.
 
                 <img class="img-fluid" src="hardBridges.png" class="mx-auto d-block" />
-                <p>
+                <p class="text-justify">
                     The characteristics of the bridge largely determine the difficulty of weight estimation.
                     A short, stiff bridge will deform less than a long bridge and will give a weaker signal;
                     a long, flexible bridge will deform more, but strain peaks will overlap more and will be harder to resolve.
                     Long bridges are also more prone to harmonics which, if not suppressed, may confound the fitting algorithm.
                 </p>
-                <p>
+                <p class="text-justify">
                     The type of bridge construction is also critical for the performance of BWIM:
                     <ul>
                         <li><i>Frame bridges</i> are optimal due to their rigidity and the lack of bearings.</li>
@@ -151,7 +151,7 @@
                 </p>
 
 
-                <p>
+                <p class="text-justify">
                     The accuracy of the measurements and the resolving power of the algorithm determine the range of bridges to which BWIM can be rigorously applied.
 
                 </p>
@@ -163,13 +163,13 @@
                 <h5>
                     3.1  Introduction
                 </h5>
-                <p>
+                <p class="text-justify">
                     The COST323 specifications were developed to give manufacturers and users of Weigh In Motion systems a common framework for discussion and comparison.
                     COST 323 is not an official standard, but has gained acceptance in the WIM community in Europe.
                     It defines accuracy classes, measurement requirements and vehicle classes.
                     This section summarises the points relevant to Bridge Weigh In Motion, it is of course our interpretation and [1] remains the authoritative text.
                 </p>
-                <p>
+                <p class="text-justify">
                     Weigh in Motion systems are a pragmatic solution to a real-world problem.
                     They measure the impact of vehicle axles on a bridge.
                     As such they are affected by the interaction of the vehicle's suspension and the local characteristics of the bridge, neither of which is entirely deterministic.
@@ -231,66 +231,67 @@
                 </div>
                 <h5>3.3  Measurement Sites</h5>
                 <h6>Classes of Measurement Site</h6>
-                Since the bridge or road forms part of the measurement system, COST323 also specifies the acceptable road geometry.
-                Obviously it is not possible to conduct the most accurate measurements at a relatively poor site.
-                Measurement sites are classified into three classes,
-                The table below shows the site requirements for the different accuracy classes.
+                <p class="text-justify">
+                    Since the bridge or road forms part of the measurement system, COST323 also specifies the acceptable road geometry.
+                    Obviously it is not possible to conduct the most accurate measurements at a relatively poor site.
+                    Measurement sites are classified into three classes,
+                    The table below shows the site requirements for the different accuracy classes.
+                    </p>
+                    <div class="container">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Accuracy Class</th>
+                                    <th>Site I</th>
+                                    <th>Site II</th>
+                                    <th>Site III</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>A(5)</td>
+                                    <td>Sufficient</td>
+                                    <td>Insufficient</td>
+                                    <td>Insufficient</td>
+                                </tr>
+                                <tr>
+                                    <td>B+(7)</td>
+                                    <td>Sufficient</td>
+                                    <td>Insufficient.</td>
+                                    <td>Insufficient.</td>
 
-                <div class="container">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Accuracy Class</th>
-                                <th>Site I</th>
-                                <th>Site II</th>
-                                <th>Site III</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>A(5)</td>
-                                <td>Sufficient</td>
-                                <td>Insufficient</td>
-                                <td>Insufficient</td>
-                            </tr>
-                            <tr>
-                                <td>B+(7)</td>
-                                <td>Sufficient</td>
-                                <td>Insufficient.</td>
-                                <td>Insufficient.</td>
+                                </tr>
+                                <tr>
+                                    <td>B(10)</td>
+                                    <td>Sufficient</td>
+                                    <td>Sufficient.</td>
+                                    <td>Insufficient.</td>
+                                </tr>
 
-                            </tr>
-                            <tr>
-                                <td>B(10)</td>
-                                <td>Sufficient</td>
-                                <td>Sufficient.</td>
-                                <td>Insufficient.</td>
-                            </tr>
+                                <tr>
+                                    <td>C(15)</td>
+                                    <td>Overspecified</td>
+                                    <td>Sufficient.</td>
+                                    <td>Sufficient.</td>
+                                </tr>
+                                <tr>
+                                    <td>D(20)</td>
+                                    <td>Overspecified</td>
+                                    <td>Overspecified.</td>
+                                    <td>Sufficient.</td>
+                                </tr>
 
-                            <tr>
-                                <td>C(15)</td>
-                                <td>Overspecified</td>
-                                <td>Sufficient.</td>
-                                <td>Sufficient.</td>
-                            </tr>
-                            <tr>
-                                <td>D(20)</td>
-                                <td>Overspecified</td>
-                                <td>Overspecified.</td>
-                                <td>Sufficient.</td>
-                            </tr>
-
-                            <tr>
-                                <td>D(25)</td>
-                                <td>Overspecified</td>
-                                <td>Overspecified.</td>
-                                <td>Sufficient.</td>
-                            </tr>
+                                <tr>
+                                    <td>D(25)</td>
+                                    <td>Overspecified</td>
+                                    <td>Overspecified.</td>
+                                    <td>Sufficient.</td>
+                                </tr>
 
 
-                        </tbody>
-                    </table>
-                </div>
+                            </tbody>
+                        </table>
+                    </div>
             </div>
             <div class="col-sm-1" style="background-color:lavender;"></div>
         </div>
@@ -315,14 +316,14 @@
             <div class="col-sm-1" style="background-color:lavender;"></div>
 
             <div class="col-sm-2">
-                <img class="img-fluid" src="longGradient.png" class="mx-auto d-block" />
+                <img class="img-fluid" src="longGradient.PNG" class="mx-auto d-block" />
             </div>
             <div class="col-sm-2">
                 Is the vehicle is ascending or descending a significant slope during measurement? this may cause the vehicle to decelerate and may shift the load distribution between axles.
             </div>
             <div class="col-sm-2" style="background-color:white;"></div>
             <div class="col-sm-2">
-                <img class="img-fluid" src="transGradient.png" class="mx-auto d-block" />
+                <img class="img-fluid" src="transGradient.PNG" class="mx-auto d-block" />
             </div>
             <div class="col-sm-2">
                 Is the road is tilted in the measurement region? The force vector and the measurement vector will no longer be aligned, also a tilt may unbalance the forces acting through the wheels of each axle.
@@ -335,7 +336,7 @@
 
             <div class="col-sm-1" style="background-color:lavender;"></div>
             <div class="col-sm-2">
-                <img class="img-fluid" src="radCurv.png" class="mx-auto d-block" />
+                <img class="img-fluid" src="radCurv.PNG" class="mx-auto d-block" />
             </div>
 
 
@@ -347,7 +348,7 @@
 
             <div class="col-sm-2">
 
-                <img class="img-fluid" src="evenness.png" class="mx-auto d-block" />
+                <img class="img-fluid" src="evenness.PNG" class="mx-auto d-block" />
             </div>
             <div class="col-sm-2">
                 Are there slow undulations in the road surface?
@@ -364,7 +365,7 @@
             <div class="col-sm-1" style="background-color:lavender;"></div>
             <div class="col-sm-2">
 
-                <img class="img-fluid" src="rutting.png" class="mx-auto d-block" />
+                <img class="img-fluid" src="rutting.PNG" class="mx-auto d-block" />
             </div>
             <div class="col-sm-2">
                 Does the road surface have indentations caused by traffic wear?
@@ -372,7 +373,7 @@
             <div class="col-sm-2" style="background-color:white;"></div>
 
             <div class="col-sm-2">
-                <img class="img-fluid" src="skew.png" class="mx-auto d-block" />
+                <img class="img-fluid" src="skew.PNG" class="mx-auto d-block" />
             </div>
             <div class="col-sm-2">
                 Are the road supports perpendicular to the direction of travel?
@@ -386,68 +387,69 @@
             <div class="col-sm-10">
 
                 <h6>Classes of Measurement Site</h6>
-                Since the bridge or road forms part of the measurement system, COST323 also specifies the acceptable road geometry.
-                Obviously it is not possible to conduct the most accurate measurements at a relatively poor site.
-                Measurement sites are classified into three classes,
-                The table below shows the site requirements for the different accuracy classes.
+                <p class="text-justify">
+                    Since the bridge or road forms part of the measurement system, COST323 also specifies the acceptable road geometry.
+                    Obviously it is not possible to conduct the most accurate measurements at a relatively poor site.
+                    Measurement sites are classified into three classes,
+                    The table below shows the site requirements for the different accuracy classes.
+                    </p>
+                    <div class="container">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Criterion</th>
+                                    <th>Site I</th>
+                                    <th>Site II</th>
+                                    <th>Site III</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Longitudinal Slope</td>
+                                    <td>&lt; 1 &#37;</td>
+                                    <td>&lt; 2 &#37;</td>
+                                    <td>&lt; 2 &#37;</td>
+                                </tr>
+                                <tr>
+                                    <td>Transverse Slope</td>
+                                    <td>&lt; 3 &#37;</td>
+                                    <td>&lt; 3 &#37;</td>
+                                    <td>&lt; 3 &#37;</td>
 
-                <div class="container">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Criterion</th>
-                                <th>Site I</th>
-                                <th>Site II</th>
-                                <th>Site III</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Longitudinal Slope</td>
-                                <td>&lt; 1 &#37;</td>
-                                <td>&lt; 2 &#37;</td>
-                                <td>&lt; 2 &#37;</td>
-                            </tr>
-                            <tr>
-                                <td>Transverse Slope</td>
-                                <td>&lt; 3 &#37;</td>
-                                <td>&lt; 3 &#37;</td>
-                                <td>&lt; 3 &#37;</td>
+                                </tr>
+                                <tr>
+                                    <td>Radius of curvature</td>
+                                    <td>&lt; 1000m</td>
+                                    <td>&lt; 1000m</td>
+                                    <td>&lt; 1000m</td>
+                                </tr>
 
-                            </tr>
-                            <tr>
-                                <td>Radius of curvature</td>
-                                <td>&lt; 1000m</td>
-                                <td>&lt; 1000m</td>
-                                <td>&lt; 1000m</td>
-                            </tr>
+                                <tr>
+                                    <td>Rutting depth (max.)</td>
+                                    <td>&lt; 4mm </td>
+                                    <td>&lt; 7mm</td>
+                                    <td>&lt; 10mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Evenness (m/km)</td>
+                                    <td>0 to 1.3</td>
+                                    <td>1.3 to 2.6</td>
+                                    <td>2.6 to 4.0</td>
+                                </tr>
 
-                            <tr>
-                                <td>Rutting depth (max.)</td>
-                                <td>&lt; 4mm </td>
-                                <td>&lt; 7mm</td>
-                                <td>&lt; 10mm</td>
-                            </tr>
-                            <tr>
-                                <td>Evenness (m/km)</td>
-                                <td>0 to 1.3</td>
-                                <td>1.3 to 2.6</td>
-                                <td>2.6 to 4.0</td>
-                            </tr>
-
-                            <tr>
-                                <td>Skewness </td>
-                                <td>&lt; 10 &deg; </td>
-                                <td>10 &deg; to 30 &deg;</td>
-                                <td>&gt; 10 &deg;</td>
-                            </tr>
+                                <tr>
+                                    <td>Skewness </td>
+                                    <td>&lt; 10 &deg; </td>
+                                    <td>10 &deg; to 30 &deg;</td>
+                                    <td>&gt; 10 &deg;</td>
+                                </tr>
 
 
 
 
-                        </tbody>
-                    </table>
-                </div>
+                            </tbody>
+                        </table>
+                    </div>
             </div>
             <div class="col-sm-1" style="background-color:lavender;"></div>
         </div>
@@ -552,7 +554,7 @@
 
                 <h4>4 iBWIM and Accuracy</h4>
                 <h5>4.1 Strategy</h5>
-                <p>
+                <p class="text-justify">
                     Our iBWIM system adopts several approaches to maximise accuracy.
                     First, we use our own proprietory strain gauges with an innovative mechanical design, on-board temperature compensation and smart self-calibration of the sensors.
                     Second, we use high frequency, high bit resolution sampling. This reduces noise, but also picks up subtle nuances that help the fitting algorithm resolve overlapping peaks.
@@ -560,10 +562,10 @@
                     Finally, depending on the bridge, we may also use complementary measurements such as laser axle detection and velocity measurement to improve the quality of modelling.
                 </p>
                 <h5> 4.2 Requirements for Road Geometry </h5>
-                <p>
+                <p class="text-justify">
                     Applied to suitable bridges iBWIM system can achieve A(5) class measurements.
                     We define the following prerequistes for the measurement sites:
-                    <img class="img-fluid" src="conditions.png" class="mx-auto d-block" /><br>
+                    <img class="img-fluid" src="conditions.PNG" class="mx-auto d-block" /><br>
 
                 </p>
                 If these conditions are met, we specify the accuracy classes for the various bridge types:
