@@ -1,3 +1,21 @@
+ibridgemonitor.com/index.html
+ibridgemonitor.com/iBWIM/report.html
+ibridgemonitor.com/iSHM/report.html
+ibridgemonitor.com/Research/research.html
+ibridgemonitor.com/Research/AcademicPapers/academicPapers.html
+ibridgemonitor.com/Research/researchGroups.html
+ibridgemonitor.com/Resources/resources.html
+ibridgemonitor.com/Resources/Brochures/brochures.html
+ibridgemonitor.com/Resources/Presentations/presentations.html
+ibridgemonitor.com/Resources/WhitePapers/whitePapers.html
+ibridgemonitor.com/Resources/WhitePapers/iBWIM_overview/iBWIM_overview.html
+ibridgemonitor.com/Resources/WhitePapers/iSHM_overview/iSHM_overview.html
+ibridgemonitor.com/Resources/Posters/posters.html
+ibridgemonitor.com/Resources/NonTechArticles/nonTechArticles.html
+ibridgemonitor.com/Resources/Multimedia/multimedia.html
+ibridgemonitor.com/Resources/Demos/demosAll.html
+ibridgemonitor.com/About/about.html
+
 https://www.ibridgemonitor.com/index.html
 https://www.ibridgemonitor.com/iBWIM/report.html
 https://www.ibridgemonitor.com/iSHM/report.html
@@ -15,4 +33,5 @@ https://www.ibridgemonitor.com/Resources/NonTechArticles/nonTechArticles.html
 https://www.ibridgemonitor.com/Resources/Multimedia/multimedia.html
 https://www.ibridgemonitor.com/Resources/Demos/demosAll.html
 https://www.ibridgemonitor.com/About/about.html
+
 
