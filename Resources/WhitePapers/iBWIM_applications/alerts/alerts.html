@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Test Site</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .padding-0 {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    </style>
+    <link rel="canonical" href="https://www.ibridgemonitor.com/Resources/WhitePapers/stationX/tiffenBridge.html" />
+
+</head>
+<body>
+
+    <!-- A grey horizontal navbar that becomes vertical on small screens -->
+    <nav class="navbar navbar-expand-sm bg-light">
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../iBWIM/report.html">iBWIM</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../iSHM/report.html">iSHM</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../Research/research.html">Research</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../Resources/resources.html">Resources</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../About/about.html">About</a>
+            </li>
+
+        </ul>
+
+    </nav>
+    <br>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-1" style="background-color:white;"></div>
+
+
+            <div class="col-sm-8">
+
+                <h1>Alarm Conditions with Real-time Response</h1>
+
+
+                <p style="text-align:justify">
+
+                    iBWIM can be set up to detect vehicles that are overloaded and to react in real-time.
+                    Alarm limits for Weight, speed, individual axle load and ESAL value can be set.<br>
+                    For each paremter we define 4 states: blue, green, amber and red.<br />
+
+                    The relationship between parameters and states is shown in <a href="./limits.html">online</a> and is defined in a read-only file.
+                    The states are defined by their lower limits and are shown in the context of the bridge statistics.
+                    <br />
+                    For each of these states there are several methods to respond:
+                    <br>
+                    &bull; Variable Messaging systems (VMS) can be used request drivers to continue, or to modify their speed.<br>
+                    &bull; VMS can direct overloaded vehicles off the road.<br>
+                    &bull; CCTV and automatic license plate recognition can be used to identify and trace offending vehicles.<br>
+                    &bull; Enforcement autorities can be informed by email, SMS, or online.<br>
+
+                </p>
+            </div>
+
+
+            <div class="col-sm-2" style="background-color:white;"></div>
+            <div class="col-sm-1" style="background-color:white;"></div>
+
+        </div>
+        <img src="vspacer.PNG" alt="spacer" style="width:826px;">
+        <div class="row">
+            <div class="col-sm-2" style="background-color:white;"></div>
+
+            <div class="col-sm-6">
+                <video width="620" height="428" controls loop autoplay muted>
+                    <source src="movie.mp4" type="video/mp4">
+
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2">
+                <i>
+                    Measurements taken from Tiffen test station.<br />
+                    With simulated Variable Meassaging Sign.
+                </i>
+            </div>
+            <div class="col-sm-2" style="background-color:white;"></div>
+
+        </div>
+
+
+
+</body>
+</html>
