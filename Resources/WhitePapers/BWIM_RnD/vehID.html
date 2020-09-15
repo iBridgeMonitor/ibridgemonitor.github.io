@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Research Topics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .padding-0 {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .navbar {
+            color: #000000;
+            background-color: #67Acef;
+        }
+
+        .nav-item a {
+            color: white;
+        }
+
+        .card {
+            border: none;
+        }
+    </style>
+    <link rel="canonical" href="https://www.ibridgemonitor.com/iBWIM/report.html" />
+
+</head>
+<body>
+
+    <!-- A grey horizontal navbar that becomes vertical on small screens -->
+    <nav class="navbar navbar-expand-sm ">
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../../iBWIM/report.html">iBWIM</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../../iSHM/report.html">iSHM</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../../Research/research.html">Research</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../../Resources/resources.html">Resources</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../../About/about.html">About</a>
+            </li>
+        </ul>
+
+
+    </nav>
+
+
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+
+                <!--<img class="img-fluid" src="truckBridgeLabelled_1800pix.png" class="mx-auto d-block" />-->
+                <img class="img-fluid" src="bannerLong.png" class="mx-auto d-block" />
+
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <br />
+                <br />
+                <h1> Indentifying a vehicle's  class </h1>
+
+
+                <h3>Why classify vehicles?</h3>
+                <p style="text-align:justify">
+                    iBWIM measures vehicle parameters--it is natural to use this data to classify vehicles by type.
+                    iBWIM has always done so, either using the broad classes set out in COST323, or into much more specific categories required by some of our clients.
+                    A description of some important classification schemes is given <a href="./classify/classification.html"> here.  </a>
+                    We are currently working on a number of technologies to provide an even finer grain classification.
+                </p>
+                <p style="text-align:justify">
+                    A highly specific vehicle classifier has two advantages:
+                    <ul>
+                        <li> First, it would improve the vehicle parameter estimation--this is discussed in more detail in the section on constrained optimisation.</li>
+                        <li> Second, it would give more specific economic information--for instance, if we can discriminate concrete mixers and tipper lorries from semi-trailers we can estimate the proportion of traffic due to the construction sector.</li>
+                    </ul>
+                </p>
+                <p style="text-align:justify">
+
+
+                    <h3>Axle Patterns</h3>
+                    The simplest way to discriminate between vehicle categories is axle count.
+                    This is the first (simplifying) step in all our algorithms.
+                    The next obvious feature is the axle groupings: i.e. how are the axles spaced? are they grouped in pairs or triples?
+                    With a simple set of IF THEN rules we can discriminate many classes of vehicle based on their axle distances.
+                    Figure 1 shows a plot of the distances between the first and second, and second and third axles for three axle vehicles.
+                    Simple rules will discriminate many, though not all of the classes shown.
+                </p>
+                <p style="text-align:justify">
+                    <h3>Axle Loading</h3>
+                    As a next step we can introduce axle weights as a feature for discriminating vehicles.
+                    This is more complex because it depends not only on the vehicle class, but also on the vehicle's cargo.
+                    For each category of vehicle  axle loads will lie in a range that depends  on how the vehicle is loaded.
+                    We have to deal with the relationship between the loading of various axles.
+                </p>
+
+                <p style="text-align:justify">
+                    Consider a simple case where we wish to discriminate a Mercedes Acros 3 axle semi-trailer from its tipper variant.
+                    The unloaded and fully loaded axle weights are specified be the manufacturer, we can plot the possible loadings of these two axles on a two dimensional plot, Figure 2.
+                    The unloaded (kerb) weight is the lower vertex on the diagonal of trapezoid; the maximum loading is the upper vertex.
+                    The adjacent vertices allow for natural variation in the measurements.
+                    If we were to measure a set of vehicles belonging to these two classes, with various loads,  and plot their second and third axle loadings we would get a distribution of the form shown in Figure 3.
+                    Simply using one axle load would not be enough to tell us to which class a given truck belongs; however, with both axle loadings  and a simple rule, we can confidently discriminate between the tipper and the semi-trailer.
+                </p>
+                <img class="img" src="weightDistribution.PNG" height="300" class="mx-auto d-block" />
+                <img class="img" src="semiTipperDistrib.PNG" height="300" class="mx-auto d-block" />
+
+
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <p style="text-align:justify">
+                    <h3>Advanced Methods</h3>
+                    We are now investigating methods based on complementary sensors, e.g. laser scanners and computer vision, for identifying specific vehicle categories, and a the analytical tools that will use this data to extract useful
+                    economic information from this data.
+
+
+
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
+       
+</body>
