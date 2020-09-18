@@ -48,194 +48,209 @@
 
     </nav>
     <br>
-    <div class="container-fluid">
-
-        <div class="row">
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-
-            <div class="col-sm-10">
-
-
-                <h1>Bridge Weigh In Motion: How accurate is it?</h1>
-                <p>Keywords:<i> BWIM, Heavy Goods Vehicles, weight measurements, bridge selection, COST323</i></p>
-                <h4>1 Introduction </h4>
-                This paper discusses when BWIM can be applied and how accurate it is.
-                We will outline how BWIM works and why it needs accurate measurements.
-                We describe how accuracy is assessed, the type of bridges to which BWIM may be applied and the conditions that need to be fulfilled.
-                The relevant specifications are defined in the COST 323 document: we will summarise the points most relevant to BWIM.
-                Finally, we will describe the approach to accuracy we have pursued in iBWIM and the level of accuracy we have achieved.
-
-                <br />
-
-                <br />
-                <h4>2 Bridge Weigh in Motion: Accuracy Issues</h4>
-            </div>
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-        </div>
-    </div>
-
 
     <div class="container-fluid">
 
         <div class="row">
-            <div class="col-sm-1" style="background-color:lavender;"></div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
 
-            <div class="col-sm-4">
+                <!--<img class="img-fluid" src="truckBridgeLabelled_1800pix.png" class="mx-auto d-block" />-->
+                <img class="img-fluid" src="longBanner.png"  class="mx-auto d-block" />
 
-
-
-                <p class="text-justify">
-                    Bridge Weigh In Motion (BWIM) infers the force exerted by the axles of a vehicle by measuring how they deform the bridge.
-                    Strain gauges are mounted on the underside of the bridge; their response is linearly related to the force applied by the axle.
-                    With calibration data it is possible to calculate the weight of each of the vehicle's axles.
-                </p>
-                <p class="text-justify">
-                    As a load passes over a strain sensor the measured strain rises and then declines.
-                    For a given vehicle, a series of axles results in a series of ovelapping peaks in the strain signal.
-                    The measurement algoithm works by fitting a combination  of prototype peaks to the signal.
-                    The algorithm varies the number of peaks, their amplitude and position to obtain the best match to the signal.
-                    By measuring the location and amplitude of each prototype peak, the algorithm estimates the position and weight of each axle.
-                </p>
             </div>
-            <div class="col-sm-6">
-                <img class="img-fluid" src="fitted2.png" class="mx-auto d-block" />
-            </div>
-            <div class="col-sm-1" style="background-color:lavender;"></div>
+
+            <div class="col-sm-1"></div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-1" style="background-color:lavender;"></div>
+        <div class="container-fluid">
 
-            <div class="col-sm-10">
-                <p class="text-justify">
-                    The degree of overlap between the peaks depends on the characteristics of the bridge and the vehicle.
-                    For instance, on long bridges, multiple axles contribute to the signal, and several peaks may merge.
-                    In this case there may be several axle patterns that explain the measurement equally well.
-                    That is, it may not be possible to resolve the peaks and correctly measure individual axles.
-                    The range of bridges to which a BWIM system can be appllied depends on the system's ability to  resolve the contribution of each axle.
-                    This in turn depends on:
-                    <ul>
-                        <li>the characteristics of the bridge;</li>
-                        <li>the layout of the sensors; </li>
-                        <li>the quality of the electronics, and </li>
-                        <li>the resolving power of the estimation algorithm.</li>
-                    </ul>
-                </p>
-                In this section we will briefly discuss bridge characteristics, we leave discussion of the other points to Section 4, which deals specifically with iBWIM.
+            <div class="row">
+                <div class="col-sm-1" style="background-color:white;"></div>
 
-                <img class="img-fluid" src="hardBridges.png" class="mx-auto d-block" />
-                <p class="text-justify">
-                    The characteristics of the bridge largely determine the difficulty of weight estimation.
-                    A short, stiff bridge will deform less than a long bridge and will give a weaker signal;
-                    a long, flexible bridge will deform more, but strain peaks will overlap more and will be harder to resolve.
-                    Long bridges are also more prone to harmonics which, if not suppressed, may confound the fitting algorithm.
-                </p>
-                <p class="text-justify">
-                    The type of bridge construction is also critical for the performance of BWIM:
-                    <ul>
-                        <li><i>Frame bridges</i> are optimal due to their rigidity and the lack of bearings.</li>
-                        <li>
-                            <i>Beam girder bridges</i> are optimal with the proviso that they do not use bearings. Rubber bearings introduce dampling and vibration modes that may degrade system performance.
-                            For multibeam (prefabricated bridges) each beam must be instrumented.
-                        </li>
-                        <li><i>Steel box girder bridges</i> present difficulties because the torsional effect between lanes makes it difficult to resolve each lane.</li>
-                        <li><i>Slab bridges</i> are sub-optimal due to the influence of the second lane. Suitable where there is only one lane, or the second lane is rarely used by HGV traffic.</li>
-                        <li>
-                            <i>Compound bridges</i> many bridges contain elements from more than one of the above categories.
-                            Often these elements can be treated as isolated "sub-bridges" and we can instrument the most appropriate section of the bridge.
-                            For instance, we have achieved good results on a steel box girder bridge that had central slab sections. These were isolated and could be instrumented independently.
-                        </li>
+                <div class="col-sm-10">
 
 
-                    </ul>
-                </p>
+                    <h1>Bridge Weigh In Motion: How accurate is it?</h1>
+                    <p>Keywords:<i> BWIM, Heavy Goods Vehicles, weight measurements, bridge selection, COST323</i></p>
+                    <h4>1 Introduction </h4>
+                    This paper discusses when BWIM can be applied and how accurate it is.
+                    We will outline how BWIM works and why it needs accurate measurements.
+                    We describe how accuracy is assessed, the type of bridges to which BWIM may be applied and the conditions that need to be fulfilled.
+                    The relevant specifications are defined in the COST 323 document: we will summarise the points most relevant to BWIM.
+                    Finally, we will describe the approach to accuracy we have pursued in iBWIM and the level of accuracy we have achieved.
 
+                    <br />
 
-                <p class="text-justify">
-                    The accuracy of the measurements and the resolving power of the algorithm determine the range of bridges to which BWIM can be rigorously applied.
-
-                </p>
-
-
-                <h4>
-                    3  COST323
-                </h4>
-                <h5>
-                    3.1  Introduction
-                </h5>
-                <p class="text-justify">
-                    The COST323 specifications were developed to give manufacturers and users of Weigh In Motion systems a common framework for discussion and comparison.
-                    COST 323 is not an official standard, but has gained acceptance in the WIM community in Europe.
-                    It defines accuracy classes, measurement requirements and vehicle classes.
-                    This section summarises the points relevant to Bridge Weigh In Motion, it is of course our interpretation and [1] remains the authoritative text.
-                </p>
-                <p class="text-justify">
-                    Weigh in Motion systems are a pragmatic solution to a real-world problem.
-                    They measure the impact of vehicle axles on a bridge.
-                    As such they are affected by the interaction of the vehicle's suspension and the local characteristics of the bridge, neither of which is entirely deterministic.
-                    They are therefore, by their nature, not traceable to international measurement references.
-                    Instead, the COST323 standard was developed to account for the statistical nature of the measurement.
-                    The standard defines 5 accuracy classes by application and specifies tolerances within a 95% confidence interval.
-                </p>
-
-                <h5>3.2 Cost323 Accuracy Classes</h5>
-
-                <div class="container">
-
-
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Class</th>
-                                <th>Tolerance (95 &#37 Confidence)</th>
-                                <th>Application</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>A(5)</td>
-                                <td>&#177 5 &#37</td>
-                                <td>Legal purposes, reference measurements</td>
-                            </tr>
-                            <tr>
-                                <td>B+(7)</td>
-                                <td>&#177 7 &#37 </td>
-                                <td>Enforcement of legal weight limits, with reduced accuracy with special dispensation from legal authorities.</td>
-                            </tr>
-                            <tr>
-                                <td>B(10)</td>
-                                <td>&#177 10 &#37 </td>
-                                <td>Infrastructure maintenance, preselection of overloaded vehicles, vehicle type identification.</td>
-                            </tr>
-
-                            <tr>
-                                <td>C(15)</td>
-                                <td>&#177 15 &#37 </td>
-                                <td>Detailed statistical studies, load histograms with bin sizes of  or 2 tonnes, classification of vehicles, fatigue assessments.</td>
-                            </tr>
-                            <tr>
-                                <td>D(20)</td>
-                                <td>&#177 20 &#37 </td>
-                                <td>Detailed statistical studies, load histograms with bin sizes of  or 2 tonnes, classification of vehicles, fatigue assessments</td>
-                            </tr>
-
-                            <tr>
-                                <td>D(25)</td>
-                                <td>&#177 25 &#37 </td>
-                                <td>Statistical purposes, economic and technical studies, vehicle classification. </td>
-                            </tr>
-
-
-                        </tbody>
-                    </table>
+                    <br />
+                    <h4>2 Bridge Weigh in Motion: Accuracy Issues</h4>
                 </div>
-                <h5>3.3  Measurement Sites</h5>
-                <h6>Classes of Measurement Site</h6>
-                <p class="text-justify">
-                    Since the bridge or road forms part of the measurement system, COST323 also specifies the acceptable road geometry.
-                    Obviously it is not possible to conduct the most accurate measurements at a relatively poor site.
-                    Measurement sites are classified into three classes,
-                    The table below shows the site requirements for the different accuracy classes.
+                <div class="col-sm-1" style="background-color:white;"></div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-sm-1" style="background-color:white;"></div>
+
+                <div class="col-sm-4">
+
+
+
+                    <p class="text-justify">
+                        Bridge Weigh In Motion (BWIM) infers the force exerted by the axles of a vehicle by measuring how they deform the bridge.
+                        Strain gauges are mounted on the underside of the bridge; their response is linearly related to the force applied by the axle.
+                        With calibration data it is possible to calculate the weight of each of the vehicle's axles.
+                    </p>
+                    <p class="text-justify">
+                        As a load passes over a strain sensor the measured strain rises and then declines.
+                        For a given vehicle, a series of axles results in a series of ovelapping peaks in the strain signal.
+                        The measurement algoithm works by fitting a combination  of prototype peaks to the signal.
+                        The algorithm varies the number of peaks, their amplitude and position to obtain the best match to the signal.
+                        By measuring the location and amplitude of each prototype peak, the algorithm estimates the position and weight of each axle.
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <img class="img-fluid" src="fitted2.png" class="mx-auto d-block" />
+                </div>
+                <div class="col-sm-1" style="background-color:white;"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-1" style="background-color:white;"></div>
+
+                <div class="col-sm-10">
+                    <p class="text-justify">
+                        The degree of overlap between the peaks depends on the characteristics of the bridge and the vehicle.
+                        For instance, on long bridges, multiple axles contribute to the signal, and several peaks may merge.
+                        In this case there may be several axle patterns that explain the measurement equally well.
+                        That is, it may not be possible to resolve the peaks and correctly measure individual axles.
+                        The range of bridges to which a BWIM system can be appllied depends on the system's ability to  resolve the contribution of each axle.
+                        This in turn depends on:
+                        <ul>
+                            <li>the characteristics of the bridge;</li>
+                            <li>the layout of the sensors; </li>
+                            <li>the quality of the electronics, and </li>
+                            <li>the resolving power of the estimation algorithm.</li>
+                        </ul>
+                    </p>
+                    In this section we will briefly discuss bridge characteristics, we leave discussion of the other points to Section 4, which deals specifically with iBWIM.
+
+                    <img class="img-fluid" src="hardBridges.png" class="mx-auto d-block" />
+                    <p class="text-justify">
+                        The characteristics of the bridge largely determine the difficulty of weight estimation.
+                        A short, stiff bridge will deform less than a long bridge and will give a weaker signal;
+                        a long, flexible bridge will deform more, but strain peaks will overlap more and will be harder to resolve.
+                        Long bridges are also more prone to harmonics which, if not suppressed, may confound the fitting algorithm.
+                    </p>
+                    <p class="text-justify">
+                        The type of bridge construction is also critical for the performance of BWIM:
+                        <ul>
+                            <li><i>Frame bridges</i> are optimal due to their rigidity and the lack of bearings.</li>
+                            <li>
+                                <i>Beam girder bridges</i> are optimal with the proviso that they do not use bearings. Rubber bearings introduce dampling and vibration modes that may degrade system performance.
+                                For multibeam (prefabricated bridges) each beam must be instrumented.
+                            </li>
+                            <li><i>Steel box girder bridges</i> present difficulties because the torsional effect between lanes makes it difficult to resolve each lane.</li>
+                            <li><i>Slab bridges</i> are sub-optimal due to the influence of the second lane. Suitable where there is only one lane, or the second lane is rarely used by HGV traffic.</li>
+                            <li>
+                                <i>Compound bridges</i> many bridges contain elements from more than one of the above categories.
+                                Often these elements can be treated as isolated "sub-bridges" and we can instrument the most appropriate section of the bridge.
+                                For instance, we have achieved good results on a steel box girder bridge that had central slab sections. These were isolated and could be instrumented independently.
+                            </li>
+
+
+                        </ul>
+                    </p>
+
+
+                    <p class="text-justify">
+                        The accuracy of the measurements and the resolving power of the algorithm determine the range of bridges to which BWIM can be rigorously applied.
+
+                    </p>
+
+
+                    <h4>
+                        3  COST323
+                    </h4>
+                    <h5>
+                        3.1  Introduction
+                    </h5>
+                    <p class="text-justify">
+                        The COST323 specifications were developed to give manufacturers and users of Weigh In Motion systems a common framework for discussion and comparison.
+                        COST 323 is not an official standard, but has gained acceptance in the WIM community in Europe.
+                        It defines accuracy classes, measurement requirements and vehicle classes.
+                        This section summarises the points relevant to Bridge Weigh In Motion, it is of course our interpretation and [1] remains the authoritative text.
+                    </p>
+                    <p class="text-justify">
+                        Weigh in Motion systems are a pragmatic solution to a real-world problem.
+                        They measure the impact of vehicle axles on a bridge.
+                        As such they are affected by the interaction of the vehicle's suspension and the local characteristics of the bridge, neither of which is entirely deterministic.
+                        They are therefore, by their nature, not traceable to international measurement references.
+                        Instead, the COST323 standard was developed to account for the statistical nature of the measurement.
+                        The standard defines 5 accuracy classes by application and specifies tolerances within a 95% confidence interval.
+                    </p>
+
+                    <h5>3.2 Cost323 Accuracy Classes</h5>
+
+                    <div class="container">
+
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Tolerance (95 &#37 Confidence)</th>
+                                    <th>Application</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>A(5)</td>
+                                    <td>&#177 5 &#37</td>
+                                    <td>Legal purposes, reference measurements</td>
+                                </tr>
+                                <tr>
+                                    <td>B+(7)</td>
+                                    <td>&#177 7 &#37 </td>
+                                    <td>Enforcement of legal weight limits, with reduced accuracy with special dispensation from legal authorities.</td>
+                                </tr>
+                                <tr>
+                                    <td>B(10)</td>
+                                    <td>&#177 10 &#37 </td>
+                                    <td>Infrastructure maintenance, preselection of overloaded vehicles, vehicle type identification.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>C(15)</td>
+                                    <td>&#177 15 &#37 </td>
+                                    <td>Detailed statistical studies, load histograms with bin sizes of  or 2 tonnes, classification of vehicles, fatigue assessments.</td>
+                                </tr>
+                                <tr>
+                                    <td>D(20)</td>
+                                    <td>&#177 20 &#37 </td>
+                                    <td>Detailed statistical studies, load histograms with bin sizes of  or 2 tonnes, classification of vehicles, fatigue assessments</td>
+                                </tr>
+
+                                <tr>
+                                    <td>D(25)</td>
+                                    <td>&#177 25 &#37 </td>
+                                    <td>Statistical purposes, economic and technical studies, vehicle classification. </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <h5>3.3  Measurement Sites</h5>
+                    <h6>Classes of Measurement Site</h6>
+                    <p class="text-justify">
+                        Since the bridge or road forms part of the measurement system, COST323 also specifies the acceptable road geometry.
+                        Obviously it is not possible to conduct the most accurate measurements at a relatively poor site.
+                        Measurement sites are classified into three classes,
+                        The table below shows the site requirements for the different accuracy classes.
                     </p>
                     <div class="container">
                         <table class="table table-striped">
@@ -292,106 +307,106 @@
                             </tbody>
                         </table>
                     </div>
-            </div>
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-        </div>
-
-
-
-
-
-
-        <div class="row">
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-
-            <div class="col-sm-10">
-                <h6>Site Criteria</h6>
-                The class of a site is determined by whether it fits the following criteria:
-            </div>
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-
-            <div class="col-sm-2">
-                <img class="img-fluid" src="longGradient.PNG" class="mx-auto d-block" />
-            </div>
-            <div class="col-sm-2">
-                Is the vehicle is ascending or descending a significant slope during measurement? this may cause the vehicle to decelerate and may shift the load distribution between axles.
-            </div>
-            <div class="col-sm-2" style="background-color:white;"></div>
-            <div class="col-sm-2">
-                <img class="img-fluid" src="transGradient.PNG" class="mx-auto d-block" />
-            </div>
-            <div class="col-sm-2">
-                Is the road is tilted in the measurement region? The force vector and the measurement vector will no longer be aligned, also a tilt may unbalance the forces acting through the wheels of each axle.
-            </div>
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-        </div>
-
-
-        <div class="row">
-
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-            <div class="col-sm-2">
-                <img class="img-fluid" src="radCurv.PNG" class="mx-auto d-block" />
-            </div>
-
-
-            <div class="col-sm-2">
-                Is the measurement site on a significant curve in the road?
-            </div>
-
-            <div class="col-sm-2" style="background-color:white;"></div>
-
-            <div class="col-sm-2">
-
-                <img class="img-fluid" src="evenness.PNG" class="mx-auto d-block" />
-            </div>
-            <div class="col-sm-2">
-                Are there slow undulations in the road surface?
+                </div>
+                <div class="col-sm-1" style="background-color:white;"></div>
             </div>
 
 
 
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-
-        </div>
 
 
-        <div class="row">
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-            <div class="col-sm-2">
 
-                <img class="img-fluid" src="rutting.PNG" class="mx-auto d-block" />
-            </div>
-            <div class="col-sm-2">
-                Does the road surface have indentations caused by traffic wear?
-            </div>
-            <div class="col-sm-2" style="background-color:white;"></div>
+            <div class="row">
+                <div class="col-sm-1" style="background-color:white;"></div>
 
-            <div class="col-sm-2">
-                <img class="img-fluid" src="skew.PNG" class="mx-auto d-block" />
-            </div>
-            <div class="col-sm-2">
-                Are the road supports perpendicular to the direction of travel?
+                <div class="col-sm-10">
+                    <h6>Site Criteria</h6>
+                    The class of a site is determined by whether it fits the following criteria:
+                </div>
+                <div class="col-sm-1" style="background-color:white;"></div>
             </div>
 
-            <div class="col-sm-1" style="background-color:lavender;"></div>
 
-        </div>
-        <div class="row">
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-            <div class="col-sm-10">
+            <div class="row">
+                <div class="col-sm-1" style="background-color:white;"></div>
 
-                <h6>Classes of Measurement Site</h6>
-                <p class="text-justify">
-                    Since the bridge or road forms part of the measurement system, COST323 also specifies the acceptable road geometry.
-                    Obviously it is not possible to conduct the most accurate measurements at a relatively poor site.
-                    Measurement sites are classified into three classes,
-                    The table below shows the site requirements for the different accuracy classes.
+                <div class="col-sm-2">
+                    <img class="img-fluid" src="longGradient.PNG" class="mx-auto d-block" />
+                </div>
+                <div class="col-sm-2">
+                    Is the vehicle is ascending or descending a significant slope during measurement? this may cause the vehicle to decelerate and may shift the load distribution between axles.
+                </div>
+                <div class="col-sm-2" style="background-color:white;"></div>
+                <div class="col-sm-2">
+                    <img class="img-fluid" src="transGradient.PNG" class="mx-auto d-block" />
+                </div>
+                <div class="col-sm-2">
+                    Is the road is tilted in the measurement region? The force vector and the measurement vector will no longer be aligned, also a tilt may unbalance the forces acting through the wheels of each axle.
+                </div>
+                <div class="col-sm-1" style="background-color:white;"></div>
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-sm-1" style="background-color:white;"></div>
+                <div class="col-sm-2">
+                    <img class="img-fluid" src="radCurv.PNG" class="mx-auto d-block" />
+                </div>
+
+
+                <div class="col-sm-2">
+                    Is the measurement site on a significant curve in the road?
+                </div>
+
+                <div class="col-sm-2" style="background-color:white;"></div>
+
+                <div class="col-sm-2">
+
+                    <img class="img-fluid" src="evenness.PNG" class="mx-auto d-block" />
+                </div>
+                <div class="col-sm-2">
+                    Are there slow undulations in the road surface?
+                </div>
+
+
+
+                <div class="col-sm-1" style="background-color:white;"></div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-1" style="background-color:white;"></div>
+                <div class="col-sm-2">
+
+                    <img class="img-fluid" src="rutting.PNG" class="mx-auto d-block" />
+                </div>
+                <div class="col-sm-2">
+                    Does the road surface have indentations caused by traffic wear?
+                </div>
+                <div class="col-sm-2" style="background-color:white;"></div>
+
+                <div class="col-sm-2">
+                    <img class="img-fluid" src="skew.PNG" class="mx-auto d-block" />
+                </div>
+                <div class="col-sm-2">
+                    Are the road supports perpendicular to the direction of travel?
+                </div>
+
+                <div class="col-sm-1" style="background-color:white;"></div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-1" style="background-color:white;"></div>
+                <div class="col-sm-10">
+
+                    <h6>Classes of Measurement Site</h6>
+                    <p class="text-justify">
+                        Since the bridge or road forms part of the measurement system, COST323 also specifies the acceptable road geometry.
+                        Obviously it is not possible to conduct the most accurate measurements at a relatively poor site.
+                        Measurement sites are classified into three classes,
+                        The table below shows the site requirements for the different accuracy classes.
                     </p>
                     <div class="container">
                         <table class="table table-striped">
@@ -450,209 +465,209 @@
                             </tbody>
                         </table>
                     </div>
-            </div>
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-        </div>
-
-
-
-
-        <div class="row">
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-
-            <div class="col-sm-10">
-
-                <h6>Bridge Requirements:</h6>
-                COST323 defines the following types of bridge
-                <i>optimal</i> for BWIM:
-                <ul>
-                    <li> Steel girder
-                    <li> Pre-stressed concrete girders
-                    <li> Reinforced concrete girders
-                    <li> Culvert
-                    <li> Steel orthotropic decks
-                </ul>
-                Concrete slab bridges are defined as
-                <i>acceptable</i>.
-
-
-                <h5> 3.4 Vehicle Classes </h5>
-                The standard also defines eight categories of vehicle:
-
-            </div>
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-            <div class="col-sm-1" style="background-color:white;"></div>
-
-            <div class="col-sm-8">
-
-                <div class="container">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Category</th>
-                                <th>Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Cars, cars + trailers/caravans and vans (35kN)</td>
-
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Two axle rigid lorry</td>
-
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Rigid lorries with more than two axles</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Tractor with a semi-trailer which is supported signle or tandem axles</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Tractor with a semi-trailer which is supported by tridem axles</td>
-                            </tr>
-
-                            <tr>
-                                <td>6</td>
-                                <td>
-                                    Lorry with trailer
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>7</td>
-                                <td>Busses</td>
-                            </tr>
-
-                            <tr>
-                                <td>8</td>
-                                <td>Other vehicles</td>
-                            </tr>
-
-                        </tbody>
-                    </table>
                 </div>
-
+                <div class="col-sm-1" style="background-color:white;"></div>
             </div>
-            <div class="col-sm-1" style="background-color:white;"></div>
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-        </div>
 
-        <div class="row">
-            <div class="col-sm-1" style="background-color:lavender;"></div>
 
-            <div class="col-sm-10">
 
-                <h4>4 iBWIM and Accuracy</h4>
-                <h5>4.1 Strategy</h5>
-                <p class="text-justify">
-                    Our iBWIM system adopts several approaches to maximise accuracy.
-                    First, we use our own proprietory strain gauges with an innovative mechanical design, on-board temperature compensation and smart self-calibration of the sensors.
-                    Second, we use high frequency, high bit resolution sampling. This reduces noise, but also picks up subtle nuances that help the fitting algorithm resolve overlapping peaks.
-                    If necessary we apply signal processing techniques to suppress harmonics which might otherwise mislead the fitting algorithm.
-                    Finally, depending on the bridge, we may also use complementary measurements such as laser axle detection and velocity measurement to improve the quality of modelling.
-                </p>
-                <h5> 4.2 Requirements for Road Geometry </h5>
-                <p class="text-justify">
-                    Applied to suitable bridges iBWIM system can achieve A(5) class measurements.
-                    We define the following prerequistes for the measurement sites:
-                    <img class="img-fluid" src="conditions.PNG" class="mx-auto d-block" /><br>
 
-                </p>
-                If these conditions are met, we specify the accuracy classes for the various bridge types:
+            <div class="row">
+                <div class="col-sm-1" style="background-color:white;"></div>
+
+                <div class="col-sm-10">
+
+                    <h6>Bridge Requirements:</h6>
+                    COST323 defines the following types of bridge
+                    <i>optimal</i> for BWIM:
+                    <ul>
+                        <li> Steel girder
+                        <li> Pre-stressed concrete girders
+                        <li> Reinforced concrete girders
+                        <li> Culvert
+                        <li> Steel orthotropic decks
+                    </ul>
+                    Concrete slab bridges are defined as
+                    <i>acceptable</i>.
+
+
+                    <h5> 3.4 Vehicle Classes </h5>
+                    The standard also defines eight categories of vehicle:
+
+                </div>
+                <div class="col-sm-1" style="background-color:white;"></div>
             </div>
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-        </div>
+
+            <div class="row">
+                <div class="col-sm-1" style="background-color:white;"></div>
+                <div class="col-sm-1" style="background-color:white;"></div>
+
+                <div class="col-sm-8">
+
+                    <div class="container">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Cars, cars + trailers/caravans and vans (35kN)</td>
+
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Two axle rigid lorry</td>
+
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Rigid lorries with more than two axles</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Tractor with a semi-trailer which is supported signle or tandem axles</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Tractor with a semi-trailer which is supported by tridem axles</td>
+                                </tr>
+
+                                <tr>
+                                    <td>6</td>
+                                    <td>
+                                        Lorry with trailer
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>7</td>
+                                    <td>Busses</td>
+                                </tr>
+
+                                <tr>
+                                    <td>8</td>
+                                    <td>Other vehicles</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="col-sm-1" style="background-color:white;"></div>
+                <div class="col-sm-1" style="background-color:white;"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-1" style="background-color:white;"></div>
+
+                <div class="col-sm-10">
+
+                    <h4>4 iBWIM and Accuracy</h4>
+                    <h5>4.1 Strategy</h5>
+                    <p class="text-justify">
+                        Our iBWIM system adopts several approaches to maximise accuracy.
+                        First, we use our own proprietory strain gauges with an innovative mechanical design, on-board temperature compensation and smart self-calibration of the sensors.
+                        Second, we use high frequency, high bit resolution sampling. This reduces noise, but also picks up subtle nuances that help the fitting algorithm resolve overlapping peaks.
+                        If necessary we apply signal processing techniques to suppress harmonics which might otherwise mislead the fitting algorithm.
+                        Finally, depending on the bridge, we may also use complementary measurements such as laser axle detection and velocity measurement to improve the quality of modelling.
+                    </p>
+                    <h5> 4.2 Requirements for Road Geometry </h5>
+                    <p class="text-justify">
+                        Applied to suitable bridges iBWIM system can achieve A(5) class measurements.
+                        We define the following prerequistes for the measurement sites:
+                        <img class="img-fluid" src="conditions.PNG" class="mx-auto d-block" /><br>
+
+                    </p>
+                    If these conditions are met, we specify the accuracy classes for the various bridge types:
+                </div>
+                <div class="col-sm-1" style="background-color:white;"></div>
+            </div>
 
 
-        <div class="row">
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-            <!--<img class="img-fluid" src="bridgeTypes.png" class="mx-auto d-block" />-->
-            <div class="col-sm-10">
-                <div class="container">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Bridge Class</th>
-                                <th>5m to 10m</th>
-                                <th>11m to 23m</th>
-                                <th>24m to 35m</th>
-                                <th>&gt; 36m</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Slab</td>
-                                <td>A(5)</td>
-                                <td>B(7)</td>
-                                <td> </td>
-                                <td> </td>
+            <div class="row">
+                <div class="col-sm-1" style="background-color:white;"></div>
+                <!--<img class="img-fluid" src="bridgeTypes.png" class="mx-auto d-block" />-->
+                <div class="col-sm-10">
+                    <div class="container">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Bridge Class</th>
+                                    <th>5m to 10m</th>
+                                    <th>11m to 23m</th>
+                                    <th>24m to 35m</th>
+                                    <th>&gt; 36m</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Slab</td>
+                                    <td>A(5)</td>
+                                    <td>B(7)</td>
+                                    <td> </td>
+                                    <td> </td>
 
 
-                            </tr>
-                            <tr>
-                                <td>Frame</td>
-                                <td>  </td>
-                                <td>A(5)</td>
-                                <td>B(7)</td>
-                                <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td>Frame</td>
+                                    <td>  </td>
+                                    <td>A(5)</td>
+                                    <td>B(7)</td>
+                                    <td>  </td>
 
-                            </tr>
-                            <tr>
-                                <td>Beam</td>
-                                <td>  </td>
-                                <td>B(7)  </td>
-                                <td>B(10)</td>
-                                <td>C(15)</td>
+                                </tr>
+                                <tr>
+                                    <td>Beam</td>
+                                    <td>  </td>
+                                    <td>B(7)  </td>
+                                    <td>B(10)</td>
+                                    <td>C(15)</td>
 
 
-                            </tr>
-                            <tr>
-                                <td>Steel Box Girder</td>
-                                <td>  </td>
-                                <td>  </td>
-                                <td> </td>
-                                <td>B(10)</td>
+                                </tr>
+                                <tr>
+                                    <td>Steel Box Girder</td>
+                                    <td>  </td>
+                                    <td>  </td>
+                                    <td> </td>
+                                    <td>B(10)</td>
 
-                            </tr>
-                        </tbody>
-                    </table>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                </div> <!-- container -->
-            </div> <!--sm10-->
-            <div class="col-sm-1" style="background-color:lavender;"></div>
+                    </div> <!-- container -->
+                </div> <!--sm10-->
+                <div class="col-sm-1" style="background-color:white;"></div>
 
-         </div> <!-- row -->
+            </div> <!-- row -->
 
-        <div class="row">
-            <div class="col-sm-1" style="background-color:lavender;"></div>
-            <div class="col-sm-10">
+            <div class="row">
+                <div class="col-sm-1" style="background-color:white;"></div>
+                <div class="col-sm-10">
                     <h4>5 References</h4>
                     [1]
                     <i>COST 323 "Weigh-in-Motion of Road Vehicles"</i>, Final Report, Appendix I European WIM Specification
                     <br>
                     Editors: Bernard Jacob, Eugene O'Brien and Sophie Jehaes
-             </div>
-             <div class="col-sm-1" style="background-color:lavender;"></div>
-         </div>
+                </div>
+                <div class="col-sm-1" style="background-color:white;"></div>
+            </div>
 
 
 
 
 
 
-                
 
-            
+
+
 
 </body>
 </html>

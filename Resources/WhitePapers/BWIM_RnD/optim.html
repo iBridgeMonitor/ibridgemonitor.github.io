@@ -92,18 +92,19 @@
                 <p style="text-align:justify">
 
 
-                    While complementary sensors provide useful data, it is not always obvious how to incorporate this data into the estimation of vehicle parameters.
-                    We are currently investigating constrained optimisation techniques that use complementary sensor data to reduce the ambiguity of estimation.
-                    We will first describe optimisation in the context of iBWIM and then describe how additional information, e.g. about the vehicle class, can improve the estimate.
+                    While complementary sensors provide useful data, it is not always obvious how to use this information to improve our estimation of a vehicle's characteristics.
+                    We are currently investigating constrained optimisation techniques that use complementary sensor data to reduce the ambiguity of this estimation.
+                    We will first describe optimisation in the context of iBWIM and then describe how additional information, for example the vehicle's class, can improve our estimate of the vehicle's parameters.
                 </p>
 
                 <h3>Analytical Methods and Optimisation Methods for iBWIM</h3>
 
                 <p style="text-align:justify">
-
+                    <h5>The Analytical Method</h5>
                     The standard method for estimating vehicle parameters is an analytical approach.
-                    A set of of equations is derived  that use vehicle parameters to predict the strain signal, we call this the forward model.
-                    This equation set is inverted and solved--this is the inverse model.
+                    A set of equations is derived  that use vehicle parameters to predict the strain signal.
+                    We call this the <i>forward model</i>.
+                    This equation set is inverted and solved&mdash;this is the <i>inverse model</i>.
                     We can simply slot our measured strain signal into the inverse model and recover the axle pattern and loadings.
                     The calculation is direct; there is a single, unambiguous solution.
                 </p>
@@ -114,13 +115,15 @@
                     Nor is it easy to incorporate information from outside the analytical model, for instance from complementary measurement systems or from plausibility constraints.
                     Optimisation techniques are one way of incorporating additional sources of information and of avoiding the "brittleness" associated with an inversion model.
                 </p>
+                <h5>Optimisation for iBWIM</h5>
                 <p style="text-align:justify">
+
                     Optimisation approaches define a hypothetical vehicle, with initial guess about its axle loadings and pattern.
                     The forward model is used to predict what strain signal would be produced by this vehicle.
                     This prediction is compared with the measured signal and the difference between the two, the error value, is measured.
                     Depending on the error term the vehicle model is adjusted to produce a prediction that fits the measurement more closely.
                     This process of comparison and adjustment is repeated iteratively, until step by step the prediction converges with the measured signal.
-                    At this point, we assume that our model of the vehicle accurately represent the real vehicle.
+                    At this point, we assume that our model of the vehicle accurately represents the real vehicle.
                 </p>
             </div>
 
@@ -141,14 +144,16 @@
             </div>
 
             <div class="col-sm-3" style="background-color:white">
+                <h5>What does the optimisation process look like?</h5>
                 <p style="text-align:justify">
                     <br />
-                    The measured strain signal consists of a series of overlapping peaks--with each peak corresponding to one of the vehicle's axles.
+                    The measured strain signal consists of a series of overlapping peaks&mdash;with each peak corresponding to one of the vehicle's axles.
                     In our model we approximate each of these peaks as a Gaussian parameterised by amplitude, mean and standard deviation.
-                    Amplitude corresponds to the axle's loading, mean to its location (relative to the other axles), and standard deviation is a function of the dynamic
+                    <i>Amplitude</i> corresponds to the axle's loading, <i>mean</i> to its location (relative to the other axles), and <i>standard deviation</i> is a function of the dynamic
                     characteristics of vehicle and the bridge.
-                    We vary the parameters of each of these Gaussians (shown in isolation in the lower graph) and approximate the strain strain signal with the sum of these Gaussians (top graph).
-                    The error term is the difference between the measurement and the prediction as the improves the error term converges to zero.
+                    We vary the parameters of each Gaussians (shown in isolation in the lower graph) and approximate the strain strain signal with the sum of these Gaussians (top graph).
+                    The error term is the difference between the measurement and the prediction.
+                    As the estimate improves, the error term converges to zero.
 
                 </p>
 
@@ -160,12 +165,13 @@
         <div class="row">
             <div class="col-sm-2" style="background-color:white"></div>
             <div class="col-sm-8" style="background-color:white">
+                <h5>What is happening when we optimise?</h5>
                 <p style="text-align:justify">
-                    We can gain more insight into the process by plotting the error as a function of the parameters we are trying estimate.
+                    We can gain more insight into the process by plotting the <i>error</i> as a function of the parameters we are trying estimate.
                     To allow visualisation we limit ourselves to two parameters: the loadings of the second and third axles.
                     In reality, we would be estimating something of the order of twenty parameters.
-                    To make the graph clearer we plot -1 times the error term--this means we are asking the algorithm to find the maxima of the error function.
-                    The algorithm's task is analogous to finding the highest point in the landscape, without a map and in the dark.
+                    To make the graph clearer we plot -1 times the error term&mdash;this means we are asking the algorithm to find the maxima of the error function.
+                    The algorithm's task is analogous to finding the highest point in a landscape, without a map and in the dark.
 
 
                 </p>
@@ -187,7 +193,7 @@
 
 
             <div class="col-sm-3" style="background-color:white">
-                <p style="text-align:justify">
+                
                 <p style="text-align:justify">
                     <br />
                     The landscape shown opposite illustrates two of the difficulties an optimisation algorithm may face.
@@ -208,10 +214,10 @@
             <div class="col-sm-8" style="background-color:white">
                 <p style="text-align:justify">
                     The second issue is connected with the ridge on which the global maxima lies.
-                    When a solution lies in a region, or a curve, where the error function is flat then varying one or more parameters may not have a dramatic effect on the quality of the fit--even if it radically changes the characteristics of the vehicle model.
+                    When a solution lies in a region, or a curve, where the error function is flat then varying one or more parameters may not have a dramatic effect on the quality of the fit&mdash;even if it radically changes the characteristics of the vehicle model.
                     If this is the case, small measurement or model errors may result in us settling on a vehicle model that is radically wrong.
                     In practice, both this problem, and the problem of local sub-optimal solutions are not unique to the optimisation approach.
-                    They are, after all, implicit in the physical system--it is just that they are more obvious is the explicit calculations carried out during optimisation.
+                    They are, after all, implicit in the physical system&mdash;it is just that they are more obvious is the explicit calculations carried out during optimisation.
                 </p>
             </div>
             <div class="col-sm-2" style="background-color:white"></div>
@@ -219,10 +225,10 @@
             <div class="row">
                 <div class="col-sm-2" style="background-color:white"></div>
                 <div class="col-sm-4" style="background-color:white">
-
+                    <h5>Using new data with optimisation</h5>
                     <p style="text-align:justify">
                         One of the advantages of optimisation is that it allows us an easy way to introduce new information, either in the form of common sense or from complementary sensors.
-                        For instance,  our complementary sensors might tell us that we are dealing with a Mercedes 6 axle semi-trailer.
+                        For instance,  our complementary sensors might tell us that we are dealing with a Mercedes 3 axle tractor unit for a semi-trailer.
                         With this information we can constrain the estimates of axle weights to the trapezoid discussed in the fig 1.
                         We can, firstly limit our initial guesses for these parameters to be within the trapezoid and secondly, we can modify the penalty function to discourage solutions outside this area.
 
@@ -237,12 +243,13 @@
             <div class="row">
                 <div class="col-sm-2" style="background-color:white"></div>
                 <div class="col-sm-8" style="background-color:white">
-
+                    <h5> Summary<</h5>
                     <p style="text-align:justify">
 
                         This is obviously a simplified example, we are optimising only two parameters, when a more realistic number would be twenty.
                         However, in reality we would able to make very good initial guesses from simple peak finding in the strain signal.
                         Together with constraints about plausible axle patterns and loadings, this will dramatically reduce the search space that must be optimised.
+                        This means computation is reduced and it is feasible to conduct the optimisation in real-time.
                     </p>
 
                 </div>

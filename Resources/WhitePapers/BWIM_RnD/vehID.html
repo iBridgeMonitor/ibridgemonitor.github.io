@@ -86,6 +86,12 @@
                 <br />
                 <br />
                 <h1> Indentifying a vehicle's  class </h1>
+                <p style="text-align:justify">
+                    iBWIM measures vehicle parameters&mdash;it is natural to use this data to classify vehicles by type.
+                    iBWIM has always done so, either using the broad classes set out in COST323, or into much more specific categories required by some of our clients.
+                    A description of some important classification schemes is given <a href="./classify/classification.html"> here</a>.
+                    We are currently working on a number of technologies to provide an even finer grain classification.
+                </p>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -93,22 +99,17 @@
         <div class="row">
             <div class="col-sm-2"></div>
             <div class="col-sm-4">
-                <img class="img" src="vehClass2.PNG" height="300" class="mx-auto d-block" />
+                <img class="img" src="vehClass2.png" height="300" class="mx-auto d-block" />
             </div>
 
             <div class="col-sm-4">
                 <h3>Why classify vehicles?</h3>
-                <p style="text-align:justify">
-                    iBWIM measures vehicle parameters--it is natural to use this data to classify vehicles by type.
-                    iBWIM has always done so, either using the broad classes set out in COST323, or into much more specific categories required by some of our clients.
-                    A description of some important classification schemes is given <a href="./classify/classification.html"> here.  </a>
-                    We are currently working on a number of technologies to provide an even finer grain classification.
-                </p>
+               
                 <p style="text-align:justify">
                     A highly specific vehicle classifier has two advantages:
                     <ul>
-                        <li> First, it would improve the vehicle parameter estimation--this is discussed in more detail in the section on constrained optimisation.</li>
-                        <li> Second, it would give more specific economic information--for instance, if we can discriminate concrete mixers and tipper lorries from semi-trailers we can estimate the proportion of traffic due to the construction sector.</li>
+                        <li> First, it would improve the vehicle parameter estimation&mdash;this is discussed in more detail in the section on constrained optimisation.</li>
+                        <li> Second, it would give more specific economic information&mdash;for instance, if we can discriminate concrete mixers and tipper lorries from semi-trailers we can estimate the proportion of traffic due to the construction sector.</li>
                     </ul>
                 </p>
                 <p style="text-align:justify">
@@ -122,19 +123,20 @@
           
             <div class="col-sm-8">
                 <h3>Axle Patterns</h3>
-                The simplest way to discriminate between vehicle categories is axle count.
-                This is the first (simplifying) step in all our algorithms.
-                The next obvious feature is the axle groupings: i.e. how are the axles spaced? are they grouped in pairs or triples?
-                With a simple set of IF THEN rules we can discriminate many classes of vehicle based on their axle distances.
-                Figure 1 shows a plot of the distances between the first and second, and second and third axles for three axle vehicles.
-                Simple rules will discriminate many, though not all of the classes shown.
+                <p style="text-align:justify">
+                    The simplest way to discriminate between vehicle categories is axle count.
+                    This is the first (simplifying) step in all our algorithms.
+                    The next obvious feature is the axle groupings: i.e. how are the axles spaced? are they grouped in pairs or triples?
+                    With a simple set of <i>IF THEN</i> rules we can discriminate many classes of vehicle based on their axle distances.
+                    Figure 1 shows a plot of the distances between the first and second, and second and third axles for three axle vehicles.
+                    Simple rules will discriminate many, though not all of the classes shown.
                 </p>
                 <p style="text-align:justify">
                     <h3>Axle Loading</h3>
                     As a next step we can introduce axle weights as a feature for discriminating vehicles.
                     This is more complex because it depends not only on the vehicle class, but also on the vehicle's cargo.
                     For each category of vehicle  axle loads will lie in a range that depends  on how the vehicle is loaded.
-                    We have to deal with the relationship between the loading of various axles.
+                    Instead of the loading of each axle, we have to deal with the relationship between the loading of the various axles.
                 </p>
 
                 <p style="text-align:justify">
@@ -143,7 +145,7 @@
                     The unloaded (kerb) weight is the lower vertex on the diagonal of trapezoid; the maximum loading is the upper vertex.
                     The adjacent vertices allow for natural variation in the measurements.
                     If we were to measure a set of vehicles belonging to these two classes, with various loads,  and plot their second and third axle loadings we would get a distribution of the form shown in Figure 3.
-                    Simply using one axle load would not be enough to tell us to which class a given truck belongs; however, with both axle loadings  and a simple rule, we can confidently discriminate between the tipper and the semi-trailer.
+                    Simply using one axle load would not be enough to tell us to which class a given truck belongs; however, with both axle loadings  and a simple rule (blue line), we can confidently discriminate between the tipper and the semi-trailer.
                 </p>
                 <img class="img" src="weightDistribution.PNG" height="300" class="mx-auto d-block" />
                 <img class="img" src="semiTipperDistrib.PNG" height="300" class="mx-auto d-block" />
