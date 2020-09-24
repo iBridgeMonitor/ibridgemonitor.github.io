@@ -107,54 +107,83 @@
 
                 <img class="img" src="freqSpec.PNG" height="500" class="mx-auto d-block" />
                 <img class="img" src="spectrum.PNG" height="500" class="mx-auto d-block" />
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4">
                 <p style="text-align:justify">
                     The task of the algorithm is to attenuate this harmonic component while leaving the desired unaffected.
                     This is simplified by the fact that the bridge harmonics are usually very pure sinusoids.
                     With this knowledge it is relatively easy to identify and remove the harmonic, Figure Blockdiagram.
                     We used a Gabor filter due to its good temporal and spectral localisation.
                 </p>
+
+            </div>
+           
+            <div class="col-sm-4">
                 <img class="img" src="myFilter.PNG" height="300" class="mx-auto d-block" />
-                <img class="img" src="flowChart.PNG" height="300" class="mx-auto d-block" />
-                <img class="img" src="harmonicRedux.PNG" height="300" class="mx-auto d-block" />
-                <h5>
-                    Tracking Changes in the Bridge
-                </h5>
-                <p style="text-align:justify">
-                    This simple approach is highly effective in attenuating the harmonics—providing we know the frequency of the harmonic.The task becomes more difficult if the bridge’s frequency response changes. For instance, over the course of the day temperature variations will change the stiffness of the bridge—causeing a shift in the frequency of the bridge harmonics. We are now developing algorithms based on a  Kalman filter to track these frequency shifts and adapt to changes in the bridge’s characteristics.
-                </p><p style="text-align:justify">
-                    Of course, changes in the stiffness of the bridge also affect how much astrain  given load will induce. Although a small effect, it is nonethless significant for high accuracy measurements.  We are working on methods that use internal temperature measurements of the bridge, changes in the dynamic response of the bridge and novel calibration methods to account for this effect and improve the accuracy and precision of out iBWIM.
-                </p>
-                <h5>Dealing with Noise</h5>
-                <p style="text-align:justify">
-                    As with any measurement we must account for noise. With our high bit resolution quantisation error is negligable, and with on-board amplification on the sensor, and relatively short connections to the embedded system, there is little evidence of either white or shot noise.
-
-                    <br />
             </div>
             <div class="col-sm-2"></div>
-        </div>
-    </div>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-4">
-                <h3> Complementary Sensing Methods </h3>
-                <p style="text-align:justify">
-                    BWIM systems provide estimates based on certain assumptions, when these assumptions fail the estimates become inaccurate.
-                    Complementary sensor systems provide information that can remove ambiguities in the interpretation of BWIM data.
-                    For instance, in some bridges consecutive axles give well resolved peaks in the strain signal, in other bridges the peaks may merge.
-                    In this case interpretation of the becomes difficult: does a merged peak correspond to a group of two or three axles?
-                </p>
-                <p style="text-align:justify">
-                    With appropriate signal processing, our laser axle detection system identifies the exact location of the axle with respect to the strain signal.
-                    Once we know where our axles are located, estimation of their amplitude is much more reliable.
-            </div>
-            <div class="col-sm-4">
-                <img class="img" src="blurring.PNG" height="500" class="mx-auto d-block" />
-            </div>
-            <div class="col-sm-2">   </div>
         </div>
 
-    </div>
+            <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8">
+                            <img class="img" src="flowChart.PNG" height="300" class="mx-auto d-block" />
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8">
+                            <img class="img" src="harmonicRedux.PNG" height="300" class="mx-auto d-block" />
+                            <h5>
+                                Tracking Changes in the Bridge
+                            </h5>
+                            <p style="text-align:justify">
+                                This simple approach is highly effective in attenuating the harmonics—providing we know the frequency of the harmonic. 
+                            The task becomes more difficult if the bridge’s frequency response changes. 
+                            For instance, over the course of the day temperature variations will change the stiffness of the bridge—causeing a shift in the frequency of the bridge harmonics. 
+                            We are now developing algorithms based on a  Kalman filter to track these frequency shifts and adapt to changes in the bridge’s characteristics.
+                            </p><p style="text-align:justify">
+                                Of course, changes in the stiffness of the bridge also affect how much astrain  given load will induce. Although a small effect, it is nonethless significant for high accuracy measurements.  We are working on methods that use internal temperature measurements of the bridge, changes in the dynamic response of the bridge and novel calibration methods to account for this effect and improve the accuracy and precision of out iBWIM.
+                            </p>
+                            <h5>Dealing with Noise</h5>
+                            <p style="text-align:justify">
+                                As with any measurement we must account for noise. With our high bit resolution quantisation error is negligable, and with on-board amplification on the sensor, and relatively short connections to the embedded system, there is little evidence of either white or shot noise.
+
+                                <br />
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <h3> Complementary Sensing Methods </h3>
+                            <p style="text-align:justify">
+                                BWIM systems provide estimates based on certain assumptions, when these assumptions fail the estimates become inaccurate.
+                                Complementary sensor systems provide information that can remove ambiguities in the interpretation of BWIM data.
+                                For instance, in some bridges consecutive axles give well resolved peaks in the strain signal, in other bridges the peaks may merge.
+                                In this case interpretation of the becomes difficult: does a merged peak correspond to a group of two or three axles?
+                            </p>
+                            <p style="text-align:justify">
+                                With appropriate signal processing, our laser axle detection system identifies the exact location of the axle with respect to the strain signal.
+                                Once we know where our axles are located, estimation of their amplitude is much more reliable.
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="img" src="blurring.PNG" height="500" class="mx-auto d-block" />
+                        </div>
+                        <div class="col-sm-2">   </div>
+                    </div>
+
+                </div>
 
 </body>
