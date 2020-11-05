@@ -24,48 +24,149 @@
         .card {
             border: none;
         }
+
+		div.example {
+			background-color: yellow;
+			padding: 20px;
+			
+		}
+
+		@media screen and (max-width: 600px) {
+			div.example {
+				display: none;
+				
+			}
+		}
+		div.example2 {
+			background-color: yellow;
+			padding: 20px;
+		}
+
+		@media screen and (min-width: 600px) {
+			div.example2 {
+				display: none;
+			}
+		}
     </style>
 
 
 </head>
 
 <body>
-    <!-- A grey horizontal navbar that becomes vertical on small screens -->
-    <nav class="navbar navbar-expand-sm bg-light">
+	<!-- A grey horizontal navbar that becomes vertical on small screens -->
+	<nav class="navbar navbar-expand-sm bg-light">
 
-        <!-- Links -->
-        <!-- Links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="../index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../iBWIM/report.html">iBWIM</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../iSHM/report.html">iSHM</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../../Research/research.html">Research</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Resources/resources.html">Resources</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../About/about.html">About</a>
-            </li>
+		<!-- Links -->
+		<!-- Links -->
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="../index.html">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="../iBWIM/report.html">iBWIM</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="../iSHM/report.html">iSHM</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="../../Research/research.html">Research</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="../Resources/resources.html">Resources</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="../About/about.html">About</a>
+			</li>
 
-        </ul>
+		</ul>
 
-    </nav>
-    <br>
+	</nav>
+	<br>
 
-    <a href="../../Resources/WhitePapers/stationX/tiffenBridge.html"> Our test installation at a local bridge.  </a>
+	<a href="../../Resources/WhitePapers/stationX/tiffenBridge.html"> Our test installation at a local bridge.  </a>
+	<div class="container-fluid">
 
-    <!-- <h1>Resources</h1>-->
-    <div class="container-fluid padding-0">
-        <img class="img-fluid" src="placeHolder.png" class="mx-auto d-block">
-    </div>
+
+		<h1> iBWIM: Demonstrations and Case Studies</h1>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+					<img class="img-fluid" src="sqSpacer.jpg" class="mx-auto d-block" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2">
+					<a href="./iBWIM_overview/iBWIM_overview.html"> <img class="img-fluid" src="iconBWIM.png" class="mx-auto d-block" />  </a>
+				</div>
+				<div class="col-sm-8">
+					<div class="card card-body h-100 justify-content-center">
+						<h2>Our test station at Tiffen, Austria</h2>
+
+
+						<p style="text-align:justify">
+							We maintain a test station on the Bridge at Tiffen where we can conduct long term tests of new equipment, and as a source of test data.
+							<a href="./iBWIM_overview/iBWIM_overview.html">  Here  </a> you will find a description of the bridge and its current instrumentation (though this may change).
+							<a href="./iBWIM_overview/iBWIM_overview.html">  Here  </a> you will find up to date statistic about traffic over the bridge. Unfortunately, due to Austrian data protection laws there is no video available.
+
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-2">
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-2">
+					<a href="./iBWIM_applications/usage.html"> <img class="img-fluid" src="iconApps.PNG" class="mx-auto d-block" />  </a>
+				</div>
+				<div class="col-sm-8">
+					<div class="card card-body h-100 justify-content-center">
+						<h2>Nahon Nayak Bridge, Thailand</h2>
+
+
+						<p style="text-align:justify">
+							From the point of view of signals analysis, this is the most challenging bridge we have worked on.
+							A description of the bridge and its challenges is shown <a href="../demos/demosAll.html"> here.  </a>.
+							We have made a short movie that covers heavy goods traffic over the bridge over a period of 24 hours  <a href="./NahonNayakDemos.html"> here.  </a>.
+
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-2">
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-2">
+					<a href="./iBWIM_applications/usage.html"> <img class="img-fluid" src="iconApps.PNG" class="mx-auto d-block" />  </a>
+				</div>
+				<div class="col-sm-8">
+					<div class="card card-body h-100 justify-content-center">
+						<h2>Railway bridge at Zauchen, Austria</h2>
+
+
+						<p style="text-align:justify">
+							Traditionally applied to road bridges, iBWIM also works well on railway bridges <a href="./iBWIM_applications/usage.html">  here  </a>
+							
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-2">
+				</div>
+
+			</div>
+
+		</div>
+
 
 </body>
     </html>
