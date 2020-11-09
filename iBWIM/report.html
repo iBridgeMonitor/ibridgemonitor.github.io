@@ -9,25 +9,47 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <style>
-        .padding-0 {
-            padding-right: 0;
-            padding-left: 0;
-        }
+	<style>
+		.padding-0 {
+			padding-right: 0;
+			padding-left: 0;
+		}
 
-        .navbar {
-            color: #000000;
-            background-color: #67Acef;
-        }
+		.navbar {
+			color: #000000;
+			background-color: #67Acef;
+		}
 
-        .nav-item a {
-            color: white;
-        }
+		.nav-item a {
+			color: white;
+		}
 
-        .card {
-            border: none;
-        }
-    </style>
+		.card {
+			border: none;
+		}
+
+		div.mobileMode {
+			background-color: white;
+			padding: 20px;
+		}
+
+		@media screen and (min-width: 600px) {
+			div.mobileMode {
+				display: none;
+			}
+		}
+
+		div.monitorMode {
+			background-color: white;
+			padding: 20px;
+		}
+
+		@media screen and (max-width: 600px) {
+			div.monitorMode {
+				display: none;
+			}
+		}
+	</style>
     <link rel="canonical" href="https://www.ibridgemonitor.com/iBWIM/report.html" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -46,194 +68,195 @@
 </head>
 <body>
 
-    <!-- A grey horizontal navbar that becomes vertical on small screens -->
-    <nav class="navbar navbar-expand-sm ">
+	<div class="monitorMode">
+		<!--Only display the nav boor if in monitor mode-->
+		<nav class="navbar navbar-expand-sm ">
 
-        <!-- Links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="../index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../iBWIM/report.html">iBWIM</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../iSHM/report.html">iSHM</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Research/research.html">Research</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Resources/resources.html">Resources</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../About/about.html">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../About/about.html"> </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../About/about.html"> </a>
-            </li>
-        </ul>
-
-
-    </nav>
+			<!-- Links -->
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="../index.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../iBWIM/report.html">iBWIM</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../iSHM/report.html">iSHM</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../Research/research.html">Research</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../Resources/resources.html">Resources</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../About/about.html">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../About/about.html"> </a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../About/about.html"> </a>
+				</li>
+			</ul>
 
 
+		</nav>
+	</div>
 
-    <div class="container-fluid">
 
-
-
-        <img class="img-fluid" src="truckBridgeLabelled_2000pix.png" class="mx-auto d-block" />
-        <a href="../Resources/Brochures/broch_iBWIM.pdf" <button type="button" class="btn btn-primary btn-block .padding-0">Download brochure</button> </a>
-    </div>
+		<div class="container-fluid">
 
 
 
-
-
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8">
-                <br />
-
-                <p style="text-align:justify; font-size:18px;">
-                    Bridge Weigh in Motion (BWIM) systems are based on a simple observation:
-                    when a heavy goods vehicle crosses a bridge, the bridge deforms by a small but measurable amount.
-                    By measuring this deformation iBWIM can measure the vehicles speed, weight and how its load is distributed over the vehicle's axles.
-                </p>
-                <p style="text-align:justify; font-size:18px;">
-                    iBWIM systems can be used to gather both engineering and business intelligence.
-                    By measuring the loading of the bridge, iBWIM data can be used to predict the residual lifetime of the bridge.
-                    By identifying daily and weekly patterns in traffic, maintenance can be scheduled for minimum disruption.
-                    By measuring goods traffic across the bridge we can assess the bridge's economic value.
-                    <br />
-                </p>
-            </div>
-            <div class="col-sm-2"></div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-8">
-                <img class="img-fluid" src="iBwimConcept1024pixx.png" class="mx-auto d-block" />
-            </div>
-            <div class="col-sm-4">
-                <div class="card card-body h-100 justify-content-center">
-                    <h2>Off-grid</h2>
-                    <p style="text-align:justify; font-size:18px;">
-                        iBWIM has a lightweight embedded system on-site that transmits measurements to a remote server.
-                        The on-site system can be self-powered and only needs mobile network coverage.
-                    </p>
-
-                    <p style="text-align:justify; font-size:18px;">
-                        Data is reported back to a central server for analysis, archiving and presentation.
-                        Reports can be compiled periodically and data can be presented in near real-time on our online user interface.
-
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-4">
-                <div class="card card-body h-100 justify-content-center">
-
-                    <h2>Installed without disruption</h2>
-
-                    <p style="text-align:justify; font-size:18px;">
-                        Unlike conventional Weigh in Motion systems, iBWIM is installed on the underside of the bridge&#8212there is no need for traffic works and no disruption to traffic.
-                        This means that iBWIM can be deployed on even the busiest and most critical bridges, with no risk and no adverse economic impact.
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-2"></div>
-            <div class="col-sm-4">
-                <img class="img-fluid" src="drill.jpg" class="mx-auto d-block" />
-            </div>
-
-        </div>
-
-    </div>
+			<img class="img-fluid" src="truckBridgeLabelled_2000pix.png" class="mx-auto d-block" />
+			<a href="../Resources/Brochures/broch_iBWIM.pdf" <button type="button" class="btn btn-primary btn-block .padding-0">Download brochure</button> </a>
+		</div>
 
 
 
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-1"> </div>
-            <div class="col-sm-5">
-                <img class="img-fluid" src="spacer2.png" class="mx-auto d-block" />
-                <img class="img-fluid" src="lineDraw.png" class="mx-auto d-block" />
-
-            </div>
-            <div class="col-sm-1">
-            </div>
-            <div class="col-sm-4">
-                <div class="card card-body h-100 justify-content-center">
-
-                    <h2>Sensitive</h2>
-                    <p style="text-align:justify; font-size:18px;">
-                        Not all bridges are the same: in some we get high quality, well resolved signals; in others axle peaks merge and the signal is affected by harmonics.
-                        With high quality signal processing we can extend the range of bridges to which BWIM can be applied.
-                    </p>
-                    <p style="text-align:justify; font-size:18px;">
-                        iBWIM uses fast, high bit resolution sampling of bridge deformation.
-                        Together with complementary measurements such as laser axle detection, iBWIM can resolve the contribution of individual axles, even on long bridges.
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-1">
-            </div>
-        </div>
-
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="card card-body h-100 justify-content-center">
-                    <h2>Flexible</h2>
-                    <p style="text-align:justify; font-size:18px;">  With a wide choice of sensors, output, power, communications and software options&#8212iBWIM can be tailored to perform the tasks you need on your bridge.</p>
-                    <p style="text-align:justify; font-size:18px;">
-    For instance, with our solar and GSM modules, iBWIM can be deployed to remote sites that have little infrastructure support.
-    Visual displays give drivers feedback about vehicle loading, and can direct vehicles of interest to laybys for inspection.
-    CCTV with automatic license plate recognition allow overloaded vehicles to be tracked and open new possibilities for tolling heavy goods traffic.
-</p>
-
-                </div>
-            </div>
-
-            <div class="col-sm-8">
-                <img class="img-fluid" src="bWIMproducts2b.png" class="mx-auto d-block" />
-
-            </div>
 
 
-        </div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<br />
 
-    </div>
-    <!--<a href="../Resources/Brochures/iBWIM_whitepaper.pdf" <button type="button" class="btn btn-primary btn-block .padding-0">Download brochure</button> </a>-->
-    <!--<a href="../iBWIM/Demos/Intro.html" <button type="button" class="btn btn-primary btn-block .padding-0">See a demonstration</button> </a>-->
-    <a href="../Resources/WhitePapers/wPapersBWIM_list.html" <button type="button" class="btn btn-primary btn-block .padding-0">More Information About iBWIM</button> </a>
-    <a href="../Resources/WhitePapers/BWIM_RnD/researchTopics.html" <button type="button" class="btn btn-primary btn-block .padding-0">Research topics in iBWIM</button> </a>
-    <a href="../Partners/partners.html" <button type="button" class="btn btn-primary btn-block .padding-0">Partners and Distributers</button> </a>
-    <a href="../ContactUs/contactUs.html" <button type="button" class="btn btn-primary btn-block .padding-0">Contact us</button> </a>
+					<p style="text-align:justify; font-size:18px;">
+						Bridge Weigh in Motion (BWIM) systems are based on a simple observation:
+						when a heavy goods vehicle crosses a bridge, the bridge deforms by a small but measurable amount.
+						By measuring this deformation iBWIM can measure the vehicles speed, weight and how its load is distributed over the vehicle's axles.
+					</p>
+					<p style="text-align:justify; font-size:18px;">
+						iBWIM systems can be used to gather both engineering and business intelligence.
+						By measuring the loading of the bridge, iBWIM data can be used to predict the residual lifetime of the bridge.
+						By identifying daily and weekly patterns in traffic, maintenance can be scheduled for minimum disruption.
+						By measuring goods traffic across the bridge we can assess the bridge's economic value.
+						<br />
+					</p>
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
 
-    <div class="container-fluid padding-0">
-        <img class="img-fluid" src="../footer.png" class="mx-auto d-block">
-    </div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-8">
+					<img class="img-fluid" src="iBwimConcept1024pixx.png" class="mx-auto d-block" />
+				</div>
+				<div class="col-sm-4">
+					<div class="card card-body h-100 justify-content-center">
+						<h2>Off-grid</h2>
+						<p style="text-align:justify; font-size:18px;">
+							iBWIM has a lightweight embedded system on-site that transmits measurements to a remote server.
+							The on-site system can be self-powered and only needs mobile network coverage.
+						</p>
+
+						<p style="text-align:justify; font-size:18px;">
+							Data is reported back to a central server for analysis, archiving and presentation.
+							Reports can be compiled periodically and data can be presented in near real-time on our online user interface.
+
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-4">
+					<div class="card card-body h-100 justify-content-center">
+
+						<h2>Installed without disruption</h2>
+
+						<p style="text-align:justify; font-size:18px;">
+							Unlike conventional Weigh in Motion systems, iBWIM is installed on the underside of the bridge&#8212there is no need for traffic works and no disruption to traffic.
+							This means that iBWIM can be deployed on even the busiest and most critical bridges, with no risk and no adverse economic impact.
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-4">
+					<img class="img-fluid" src="drill.jpg" class="mx-auto d-block" />
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-1"> </div>
+				<div class="col-sm-5">
+					<img class="img-fluid" src="spacer2.png" class="mx-auto d-block" />
+					<img class="img-fluid" src="lineDraw.png" class="mx-auto d-block" />
+
+				</div>
+				<div class="col-sm-1">
+				</div>
+				<div class="col-sm-4">
+					<div class="card card-body h-100 justify-content-center">
+
+						<h2>Sensitive</h2>
+						<p style="text-align:justify; font-size:18px;">
+							Not all bridges are the same: in some we get high quality, well resolved signals; in others axle peaks merge and the signal is affected by harmonics.
+							With high quality signal processing we can extend the range of bridges to which BWIM can be applied.
+						</p>
+						<p style="text-align:justify; font-size:18px;">
+							iBWIM uses fast, high bit resolution sampling of bridge deformation.
+							Together with complementary measurements such as laser axle detection, iBWIM can resolve the contribution of individual axles, even on long bridges.
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-1">
+				</div>
+			</div>
+
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="card card-body h-100 justify-content-center">
+						<h2>Flexible</h2>
+						<p style="text-align:justify; font-size:18px;">  With a wide choice of sensors, output, power, communications and software options&#8212iBWIM can be tailored to perform the tasks you need on your bridge.</p>
+						<p style="text-align:justify; font-size:18px;">
+							For instance, with our solar and GSM modules, iBWIM can be deployed to remote sites that have little infrastructure support.
+							Visual displays give drivers feedback about vehicle loading, and can direct vehicles of interest to laybys for inspection.
+							CCTV with automatic license plate recognition allow overloaded vehicles to be tracked and open new possibilities for tolling heavy goods traffic.
+						</p>
+
+					</div>
+				</div>
+
+				<div class="col-sm-8">
+					<img class="img-fluid" src="bWIMproducts2b.png" class="mx-auto d-block" />
+
+				</div>
+
+
+			</div>
+
+		</div>
+		<!--<a href="../Resources/Brochures/iBWIM_whitepaper.pdf" <button type="button" class="btn btn-primary btn-block .padding-0">Download brochure</button> </a>-->
+		<!--<a href="../iBWIM/Demos/Intro.html" <button type="button" class="btn btn-primary btn-block .padding-0">See a demonstration</button> </a>-->
+		<a href="../Resources/WhitePapers/wPapersBWIM_list.html" <button type="button" class="btn btn-primary btn-block .padding-0">More Information About iBWIM</button> </a>
+		<a href="../Resources/WhitePapers/BWIM_RnD/researchTopics.html" <button type="button" class="btn btn-primary btn-block .padding-0">Research topics in iBWIM</button> </a>
+		<a href="../Partners/partners.html" <button type="button" class="btn btn-primary btn-block .padding-0">Partners and Distributers</button> </a>
+		<a href="../ContactUs/contactUs.html" <button type="button" class="btn btn-primary btn-block .padding-0">Contact us</button> </a>
+
+		<div class="container-fluid padding-0">
+			<img class="img-fluid" src="../footer.png" class="mx-auto d-block">
+		</div>
 
 
 </body>
