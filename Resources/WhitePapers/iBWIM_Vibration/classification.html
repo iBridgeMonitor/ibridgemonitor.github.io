@@ -1,0 +1,488 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Vehicle Class</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .padding-0 {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .navbar {
+            color: #000000;
+            background-color: #67Acef;
+        }
+
+        .nav-item a {
+            color: white;
+        }
+
+        .card {
+            border: none;
+        }
+    </style>
+    <link rel="canonical" href="https://www.ibridgemonitor.com/Resources/WhitePapers/classify/classification.html" />
+
+</head>
+<body>
+
+    <!-- A grey horizontal navbar that becomes vertical on small screens -->
+    <nav class="navbar navbar-expand-sm ">
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+				<a class="nav-link" href="../iBWIMdetailedInfo.html">iBWIM</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../../iSHM/report.html">iSHM</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../../Research/research.html">Research</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../../Resources/resources.html">Resources</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../About/about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../About/about.html"> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../About/about.html"> </a>
+            </li>
+        </ul>
+
+
+    </nav>
+
+
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+
+                <!--<img class="img-fluid" src="truckBridgeClass_1800pix.png" class="mx-auto d-block" />-->
+                <img class="img-fluid" src="longBanner.png" class="mx-auto d-block" />
+
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+
+
+
+
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <br />
+                        <br />
+                        <h3> Identifying and Classifying Goods Vehicles </h3>
+                        <p style="text-align:justify">
+                            A BWIM system is capable of measuring the loading and spacing of a vehicle's axles; it is often desirable to use this information to identify the type of vehicle.
+                            By classifying vehicles we can infer useful data about their purposes and loads.
+                            For instance, by identifying concrete mixers and tipper trucks, we can resolve construction traffic from goods traffic.
+                            By identifying cars, tractors and buses, we can obtain a picture of the makeup of traffic accross the bridge, and its congestion patterns.
+                            By identifying the tractor unit and the class of iso-container we can estimate the goods load.
+                            Therefore, a system that can classify vehicles allows an informative economic analysis of bridge traffic.
+                        </p>
+                        <p style="text-align:justify">
+                            In fact, there are many classification systems in use, these may differ because of their intended application or because of differing national standards.
+                            This document is intended to explain the main classification systems <i> within the context of BWIM</i>.
+                            We will discuss five systems, starting from the coarsest:
+                            <ul>
+                                <li>The legal definitions that hold within the European Economic Area </li>
+                                <li>The system suggested for BWIM in the COST 323 guidelines </li>
+                                <li>The 2003 Guide produced by the UK Department of Transport. </li>
+                                <li>User defined systems </li>
+                                <li>Advanced classification systems </li>
+
+                            </ul>
+
+                        </p>
+                        <p style="text-align:justify">
+                            All of these systems are defined in terms of weight or vehicle dimension, in the final section we shall define values for these parameters for typical vehicles.
+                        </p>
+
+
+                        <br />
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+
+
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <br />
+
+
+
+                        <h5> 1. EU Regulations</h5>
+
+
+
+
+                        <div class="container">
+
+
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Class</th>
+                                        <th>Designation</th>
+                                        <th>Weight (T)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Medium Goods Vehicle (MGV)</td>
+                                        <td>N1</td>
+                                        <td>3.5 to 7.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Large Goods Vehicle (LGV or HGV)</td>
+                                        <td>N2 </td>
+                                        <td>7.5 to 12.0.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LGV (articulated)</td>
+                                        <td>N3</td>
+                                        <td>16.5 to 44.0</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Draw-bar</td>
+                                        <td> </td>
+                                        <td>18.75.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Larger Heavier Vehicle (LHV)</td>
+                                        <td> </td>
+                                        <td>44.0 to 75.0</td>
+                                    </tr>
+
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="container">
+                            <h5> 1.1 Standard Containers in EU</h5>
+
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Class</th>
+                                        <th>Length (m)</th>
+                                        <th>Width (m)</th>
+                                        <th>Weight Empty (T)</th>
+                                        <th>Weight Loaded (T)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>20'	</td>
+                                        <td>6.06 </td>
+                                        <td>2.59</td>
+                                        <td>2.33</td>
+                                        <td>24.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>40'	</td>
+                                        <td>12.2 </td>
+                                        <td>2.59</td>
+                                        <td>4.0</td>
+                                        <td>30.48</td>
+                                    </tr>
+                                    <tr>
+                                        <td>45'	HC</td>
+                                        <td>13.72 </td>
+                                        <td>2.89</td>
+                                        <td>4.8</td>
+                                        <td>30.48</td>
+                                    </tr>
+                                    <tr>
+                                        <td>45'	PW</td>
+                                        <td>13.72 </td>
+                                        <td>2.59</td>
+                                        <td>4.8</td>
+                                        <td>30.48</td>
+                                    </tr>
+                                    <tr>
+                                        <td>48'	HC</td>
+                                        <td>14.63 </td>
+                                        <td>2.90</td>
+                                        <td> </td>
+                                        <td> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>53'	HC</td>
+                                        <td>16.15 </td>
+                                        <td>2.90</td>
+                                        <td> 5.0</td>
+                                        <td>30.48 </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <br />
+
+
+
+                        <h5>
+                            2. COST Guidelines
+                        </h5>
+
+                        The classification system adopted in COST 323 is designed specifically for BWIM systems
+
+
+
+
+
+                        <div class="container">
+
+
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Description</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Cars, vans, cars with trailers</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2 Axle, rigid lorry </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Rigid lorry, more than 2 axles </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>4.</td>
+                                        <td>Tractor and semi-trailer with single or tandem axels</td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>5.</td>
+                                        <td>Tractor and semi-trailer with tridem axels</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>6.</td>
+                                        <td> Lorry with trailer </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>7.</td>
+                                        <td>Buses </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>8.</td>
+                                        <td>Other vehicles </td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+
+                        <h5>3. UK Department of Transport</h5>
+
+
+
+
+
+                        <div class="container">
+
+
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Axles</th>
+                                        <th>Description</th>
+                                        <th>Weight (T)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Light Goods Vehicles </td>
+                                        <td>&lt; 3.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Smaller lorries </td>
+                                        <td>3.5-7.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Bigger lorries </td>
+                                        <td> 7.5 to 18</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Rigid</td>
+                                        <td> 26 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td> Articulated </td>
+                                        <td>26.0</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Rigid  </td>
+                                        <td> 32.0 </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Articulated </td>
+                                        <td> 38 </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4.</td>
+                                        <td>Vehicle and draw bar trailer  </td>
+                                        <td> 36.0 </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>5 or more.</td>
+                                        <td>Articulated </td>
+                                        <td> 40 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5.</td>
+                                        <td>Vehicle and draw bar trailer  </td>
+                                        <td> 40.0 </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>6.</td>
+                                        <td>Articulated  </td>
+                                        <td> 41.0 </td>
+                                    </tr>
+                                    </tr>
+
+                                    <tr>
+                                        <td>6.</td>
+                                        <td>Draw-bar  </td>
+                                        <td> 41.0 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5 or 6.</td>
+                                        <td>Articulated  </td>
+                                        <td> 44.0 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.</td>
+                                        <td>Draw-bar  </td>
+                                        <td> 44.0 </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>6.</td>
+                                        <td>Articulated  </td>
+                                        <td> 44.0 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.</td>
+                                        <td>Draw-bar  </td>
+                                        <td> 44.0 </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+
+
+
+
+
+                        <h4>4. User Specified</h4>
+
+                        In some applications, clients wish to define their own classes.
+                        For instance, in a antural extension of the axle groups mentioned earlier, one client specified vehicle classes in terms of axle spacing distances.
+                        Other clients may wish to classify vehicles according to their gross weight, or their axle loading pattern.
+
+
+
+
+                        <h4>Advanced Classification Systems</h4>
+
+                        This section deals with classification systems that go beyond simply identifying the type of vehicle by its load pattern, and actually infer data about the quantity and nature of goods being transported.
+                        The data gleaned drom these inferences allow an economic analysis of the bridge trafffic.
+                        While the axle load pattern measured by BWIM is a core component of such a system is not always sufficient for the high specificity classifications required for economic analysis of traffic.
+                        For this reason we have developed a complementary measurement system that measures the silhoutte of the vehicle.
+
+                        <h5>Economic Classes</h5>
+
+                        <ul>
+                            <li>Agricultural Tractors </li>
+                            <li>Private cars  </li>
+                            <li>Small vans  </li>
+                            <li>Buses/coaches  </li>
+                            <li>Large vans  </li>
+                            <li> Small flatbed trucks </li>
+                            <li> Large flatbed trucks. </li>
+                            <li> Construction traffic  </li>
+                            a. Tipper lorries
+                            <br />
+                            b. Concrete mixers
+                            <br />
+                            <li> Container traffic </li>
+                            <li> Articulated lorry, non-container based. </li>
+                            <li>  Lumber transport </li>
+                            <li>  Tankers</li>
+                            <li> Car transporters </li>
+                            <li>  Exceptional loads </li>
+
+                        </ul>
+                        We are currently working on systems that, together with iBWIM will be able to distinguish between these classes.
